@@ -1,0 +1,11 @@
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.csprojAssemblyReference.cache
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.csproj.CoreCompileInputs.cache
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.AssemblyInfoInputs.cache
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.AssemblyInfo.cs
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/bin/Debug/netcoreapp2.2/NetChat.console1.deps.json
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/bin/Debug/netcoreapp2.2/NetChat.console1.runtimeconfig.json
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/bin/Debug/netcoreapp2.2/NetChat.console1.runtimeconfig.dev.json
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/bin/Debug/netcoreapp2.2/NetChat.console1.dll
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/bin/Debug/netcoreapp2.2/NetChat.console1.pdb
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.dll
+/home/daniel/Nextcloud/HTL-2019-20/NetChat/NetChat.console1/obj/Debug/netcoreapp2.2/NetChat.console1.pdb
