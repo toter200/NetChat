@@ -15,7 +15,10 @@ namespace NetChat.console1
             this.UserId = id;
             Timestamp = DateTime.Now;
         }
-
+        public void IsSynchronized()
+        {
+            this.Synchronized = true;
+        }
         public override string ToString()
         {
             return Content + "- at: " + Timestamp + " Synched: " + Synchronized;

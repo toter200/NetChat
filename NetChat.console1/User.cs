@@ -7,6 +7,8 @@ namespace NetChat.console1
         public string mail { get; private set; }
         public int Id { get; private set; }
 
+        //Think the devices throught, adding a new chat for every device doesnt make sense.
+        //Every device will have multiple chats...
         public User(string mail, int id)
         {
             this.mail = mail;
@@ -25,7 +27,9 @@ namespace NetChat.console1
             {
                 if (!msg.Synchronized)
                 {
+                    msg.IsSynchronized();
                     unsynched.Add(msg);
+
                 }
             }
             foreach (Message msg in unsynched)
@@ -38,6 +42,7 @@ namespace NetChat.console1
             {
                 if (!msg.Synchronized)
                 {
+                    msg.IsSynchronized();
                     unsynched.Add(msg);
                 }
             }

@@ -27,7 +27,18 @@ namespace NetChat.console1
             danielKevin.Add(kevin1);
             danielKevin.Add(daniel3);
             danielKevin.Add(kevin2);
+            System.Console.WriteLine("FIRST CHAT UNSYNCED");
             danielKevin.print();
+            System.Console.WriteLine();
+
+            Chat danielKevinPhone = new Chat(daniel, kevin);
+            System.Console.WriteLine("SECCOND CHAT UNSYNCED");
+            danielKevinPhone.print();
+            daniel.Sync(danielKevin, danielKevinPhone);
+
+
+            System.Console.WriteLine("SECCOND CHAT SYNCED");
+            danielKevinPhone.print();
         }
     }
 }
