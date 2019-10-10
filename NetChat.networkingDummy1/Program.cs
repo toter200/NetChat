@@ -14,7 +14,7 @@ namespace NetChat.networkingDummy1
         {
             StartTcpListenerThread();
             Thread.Sleep(300);
-            StartTcpSendingThread();
+            SendMessage("sample text");
             Console.ReadKey();
         }
 
@@ -43,23 +43,15 @@ namespace NetChat.networkingDummy1
             tcpListenerThread.Start();
         }
 
-        private static void StartTcpSendingThread()
+        private static void SendMessage(string text)
         {
             var tcpSendingThread = new Thread(() =>
             {
                 var tcpClient = new TcpClient("localhost", Port);
-                while (true)
-                    try
-                    {
-                        tcpClient.Client.Send(
-                            Encoding.UTF8.GetBytes("sample Text. can i make this string as long as i can?"));
-                        //tcpClient.Client.Send(new byte[] {1, 2, 8});
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e);
-                        throw;
-                    }
+
+                tcpClient.Client.Send(
+                    Encoding.UTF8.GetBytes(text)
+                );
             });
             tcpSendingThread.Start();
         }
