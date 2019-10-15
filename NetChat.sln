@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.sync", "NetChat.sync\NetChat.console1.csproj", "{7D0AFAE8-CF63-4FA1-9F67-2C7C8A6281C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.networkingDummy1", "NetChat.networkingDummy1\NetChat.networkingDummy1.csproj", "{00282C8D-7EC2-4327-927A-D224C7FFB769}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,19 @@ Global
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x64.Build.0 = Release|Any CPU
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x86.ActiveCfg = Release|Any CPU
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|x64.Build.0 = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|x86.Build.0 = Debug|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|x64.ActiveCfg = Release|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|x64.Build.0 = Release|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|x86.ActiveCfg = Release|Any CPU
+		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
