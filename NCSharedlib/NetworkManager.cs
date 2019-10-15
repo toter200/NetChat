@@ -14,6 +14,9 @@ namespace NCSharedlib
             tcpListener.Start();
             var tcpListenerThread = new Thread(() =>
             {
+
+
+
                 while (true)
                     try
                     {
