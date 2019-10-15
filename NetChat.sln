@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.sync", "NetChat.syn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.networkingDummy1", "NetChat.networkingDummy1\NetChat.networkingDummy1.csproj", "{00282C8D-7EC2-4327-927A-D224C7FFB769}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChatCore", "NetChatCore\NetChatCore.csproj", "{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,18 @@ Global
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x64.Build.0 = Release|Any CPU
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x86.ActiveCfg = Release|Any CPU
 		{3B2A470B-47C6-4820-882C-440E1CCD257A}.Release|x86.Build.0 = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Debug|x86.Build.0 = Debug|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|x64.Build.0 = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5C8CDB2-6B87-4DA2-A8F3-DD35DD1155C2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{00282C8D-7EC2-4327-927A-D224C7FFB769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
