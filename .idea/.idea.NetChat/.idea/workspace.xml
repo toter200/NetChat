@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="" />
+    <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/NCSharedlib.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NCSharedlib.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetChat.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NetChat.sln" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +24,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="45">
               <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding>
+                <marker date="1571758772752" expanded="false" signature="6:69" ph="..." />
+                <marker date="1571758772752" expanded="true" signature="91:807" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="131:805" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="192:439" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="361:429" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="482:799" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="666:758" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <marker date="1571758772752" expanded="false" signature="6:47" ph="..." />
                 <marker date="1571758772752" expanded="true" signature="69:2069" ph="{...}" />
@@ -78,22 +98,46 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+              <folding>
+                <marker date="1571759955275" expanded="true" signature="6:61" ph="..." />
+                <marker date="1571759955275" expanded="true" signature="92:923" ph="{...}" />
+                <marker date="1571759955275" expanded="true" signature="112:921" ph="{...}" />
+                <marker date="1571759955275" expanded="true" signature="127:335" ph="/* Initialization code. Don't use any Avalonia, third-party APIs or any ... */" />
+                <marker date="1571759955275" expanded="true" signature="679:788" ph="/* Your application's entry point. Here you can initialize your MVVM framework, DI ... */" />
+                <marker date="1571759955275" expanded="true" signature="856:915" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MemoryMenagemant" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -138,6 +182,24 @@
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NETCoreApp 3.0" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
               <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
@@ -145,8 +207,8 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,11 +264,21 @@
       <workItem from="1571730902725" duration="147000" />
       <workItem from="1571731077991" duration="4314000" />
       <workItem from="1571757141759" duration="1399000" />
+      <workItem from="1571759568989" duration="132000" />
+      <workItem from="1571759916082" duration="969000" />
     </task>
+    <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
+      <created>1571759162989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571759162989</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1827000" />
+    <option name="totallyTimeSpent" value="3450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,7 +292,7 @@
   <component name="ToolWindowManager">
     <frame x="1920" y="28" width="1920" height="996" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2593583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -233,12 +305,12 @@
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.329849" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.329849" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5005348" side_tool="true" weight="0.329849" />
-      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.49946523" weight="0.329849" />
+      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.49946523" visible="true" weight="0.329849" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -294,6 +366,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Created new Branch for the First Prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new Branch for the First Prototype" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,10 +387,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <marker date="1571758772752" expanded="false" signature="6:69" ph="..." />
+            <marker date="1571758772752" expanded="true" signature="91:807" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="131:805" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="192:439" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="361:429" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="482:799" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="666:758" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <marker date="1571758672013" expanded="false" signature="6:100" ph="..." />
+            <marker date="1571758672013" expanded="true" signature="123:1442" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="167:1430" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="248:975" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="414:924" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="468:772" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="812:910" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="1061:1422" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="1194:1372" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/Message.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1571758672013" expanded="true" signature="36:692" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="63:690" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="325:446" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="483:541" ph="{...}" />
+            <marker date="1571758672013" expanded="true" signature="583:684" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="30">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
             <marker date="1571758772752" expanded="false" signature="6:47" ph="..." />
             <marker date="1571758772752" expanded="true" signature="69:2069" ph="{...}" />
@@ -334,10 +456,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
+    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <marker date="1571759955275" expanded="true" signature="6:61" ph="..." />
+            <marker date="1571759955275" expanded="true" signature="92:923" ph="{...}" />
+            <marker date="1571759955275" expanded="true" signature="112:921" ph="{...}" />
+            <marker date="1571759955275" expanded="true" signature="127:335" ph="/* Initialization code. Don't use any Avalonia, third-party APIs or any ... */" />
+            <marker date="1571759955275" expanded="true" signature="679:788" ph="/* Your application's entry point. Here you can initialize your MVVM framework, DI ... */" />
+            <marker date="1571759955275" expanded="true" signature="856:915" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
