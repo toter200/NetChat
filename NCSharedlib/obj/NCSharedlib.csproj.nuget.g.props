@@ -14,9 +14,5 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.netcore.app/2.2.0/build/netcoreapp2.2/Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app/2.2.0/build/netcoreapp2.2/Microsoft.NETCore.App.props')" />
-    <Import Project="$(NuGetPackageRoot)avalonia/0.9.0-preview3/build/Avalonia.props" Condition="Exists('$(NuGetPackageRoot)avalonia/0.9.0-preview3/build/Avalonia.props')" />
   </ImportGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgAvalonia Condition=" '$(PkgAvalonia)' == '' ">/home/daniel/.nuget/packages/avalonia/0.9.0-preview3</PkgAvalonia>
-  </PropertyGroup>
 </Project>
