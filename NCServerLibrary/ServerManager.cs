@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace NCServerLibrary
+{
+    class ServerManager
+    {
+        public static bool GetStatus(string username, string email)
+        {
+            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+            string query = "SELECT * FROM usr WHERE username = @username OR mail = @email";
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
+                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(usr);
+                    com.Parameters.Add(mail);
+                    var r = com.ExecuteReader();
+                    while (r.Read())
+                    {
+                        var x = r.GetFieldValue<int>(3);
+
+                        return x == 1;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public static string GetIp(string username, string email)
+        {
+            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username OR u.mail = @email"; 
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
+                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(usr);
+                    com.Parameters.Add(mail);
+                    var r = com.ExecuteReader();
+                    while (r.Read())
+                    {
+                        var x = r.GetFieldValue<string>(0);
+
+                        return x;
+                    }
+                }
+                return "172.0.0.1";
+            }
+        }
+
+        public static string[] GetUser(string username)
+        {
+            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+            string query = "SELECT d.ipAddress, u.mail from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username";
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(usr);
+                    var r = com.ExecuteReader();
+                    while (r.Read())
+                    {
+                        var x = r.GetFieldValue<string>(0);
+                        var y = r.GetFieldValue<string>(1);
+                        string[] sa = new string[2];
+                        sa[0] = x;
+                        sa[1] = y;
+
+                        return sa;
+                    }
+                }
+                return null;
+            }
+        }
+
+    }
+}
