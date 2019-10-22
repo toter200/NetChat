@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" afterDir="false" />
-    </list>
+    <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,59 +11,68 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <marker date="1571758417588" expanded="true" signature="6:66" ph="..." />
-                <marker date="1571758417588" expanded="true" signature="88:703" ph="{...}" />
-                <marker date="1571758417588" expanded="true" signature="112:701" ph="{...}" />
-                <marker date="1571758417588" expanded="true" signature="268:363" ph="{...}" />
-                <marker date="1571758417588" expanded="true" signature="401:496" ph="{...}" />
-                <marker date="1571758417588" expanded="true" signature="525:693" ph="{...}" />
-                <marker date="1571758417588" expanded="true" signature="608:683" ph="{...}" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="60">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
-                <marker date="1571758077098" expanded="true" signature="6:69" ph="..." />
-                <marker date="1571758077098" expanded="true" signature="91:807" ph="{...}" />
-                <marker date="1571758077098" expanded="true" signature="131:805" ph="{...}" />
-                <marker date="1571758077098" expanded="true" signature="192:439" ph="{...}" />
-                <marker date="1571758077098" expanded="true" signature="361:429" ph="{...}" />
-                <marker date="1571758077098" expanded="true" signature="482:799" ph="{...}" />
-                <marker date="1571758077098" expanded="true" signature="666:758" ph="{...}" />
+                <marker date="1571758672013" expanded="false" signature="6:100" ph="..." />
+                <marker date="1571758672013" expanded="true" signature="123:1442" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="167:1430" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="248:975" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="414:924" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="468:772" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="812:910" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="1061:1422" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="1194:1372" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/Message.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding>
+                <marker date="1571758672013" expanded="true" signature="36:692" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="63:690" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="325:446" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="483:541" ph="{...}" />
+                <marker date="1571758672013" expanded="true" signature="583:684" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+            <state relative-caret-position="270">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
-                <marker date="1571758520734" expanded="false" signature="6:47" ph="..." />
-                <marker date="1571758520734" expanded="true" signature="69:2069" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="93:2067" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
-                <marker date="1571758520734" expanded="true" signature="420:539" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="579:628" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="686:734" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="793:875" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="913:2061" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="999:1158" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="1059:1144" ph="{...}" />
-                <marker date="1571758520734" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
+                <marker date="1571758772752" expanded="false" signature="6:47" ph="..." />
+                <marker date="1571758772752" expanded="true" signature="69:2069" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="93:2067" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
+                <marker date="1571758772752" expanded="true" signature="420:539" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="579:628" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="686:734" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="793:875" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="913:2061" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="999:1158" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="1059:1144" ph="{...}" />
+                <marker date="1571758772752" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
               </folding>
             </state>
           </provider>
@@ -83,6 +82,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MemoryMenagemant" />
+      </map>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,6 +153,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -201,7 +206,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1559000" />
+    <option name="totallyTimeSpent" value="1827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -214,9 +219,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="28" width="1920" height="996" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -229,7 +233,7 @@
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.329849" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.329849" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
@@ -260,7 +264,14 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
-              <option name="COLUMN_ORDER" />
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -299,52 +310,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <marker date="1571758417588" expanded="true" signature="6:66" ph="..." />
-            <marker date="1571758417588" expanded="true" signature="88:703" ph="{...}" />
-            <marker date="1571758417588" expanded="true" signature="112:701" ph="{...}" />
-            <marker date="1571758417588" expanded="true" signature="268:363" ph="{...}" />
-            <marker date="1571758417588" expanded="true" signature="401:496" ph="{...}" />
-            <marker date="1571758417588" expanded="true" signature="525:693" ph="{...}" />
-            <marker date="1571758417588" expanded="true" signature="608:683" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+        <state relative-caret-position="270">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
-            <marker date="1571758520734" expanded="false" signature="6:47" ph="..." />
-            <marker date="1571758520734" expanded="true" signature="69:2069" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="93:2067" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
-            <marker date="1571758520734" expanded="true" signature="420:539" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="579:628" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="686:734" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="793:875" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="913:2061" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="999:1158" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="1059:1144" ph="{...}" />
-            <marker date="1571758520734" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
+            <marker date="1571758772752" expanded="false" signature="6:47" ph="..." />
+            <marker date="1571758772752" expanded="true" signature="69:2069" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="93:2067" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
+            <marker date="1571758772752" expanded="true" signature="420:539" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="579:628" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="686:734" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="793:875" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="913:2061" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="999:1158" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="1059:1144" ph="{...}" />
+            <marker date="1571758772752" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <marker date="1571758077098" expanded="true" signature="6:69" ph="..." />
-            <marker date="1571758077098" expanded="true" signature="91:807" ph="{...}" />
-            <marker date="1571758077098" expanded="true" signature="131:805" ph="{...}" />
-            <marker date="1571758077098" expanded="true" signature="192:439" ph="{...}" />
-            <marker date="1571758077098" expanded="true" signature="361:429" ph="{...}" />
-            <marker date="1571758077098" expanded="true" signature="482:799" ph="{...}" />
-            <marker date="1571758077098" expanded="true" signature="666:758" ph="{...}" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
