@@ -1,4 +1,5 @@
 using System.IO;
+using System.Reflection.Emit;
 using Newtonsoft.Json;
 namespace NCSharedlib
 {
@@ -8,17 +9,22 @@ namespace NCSharedlib
         {
             
             JsonSerializer serializer = new JsonSerializer();
-            
-            using (StreamWriter sw = new StreamWriter(@"./data.json"))
-            using (JsonWriter writer = new JsonTextWriter(sw))
+            using (StreamWriter sr = new StreamWriter(@"./data.json"))
             {
-                serializer.Serialize(writer, localUser);
+                serializer.Serialize(sr, localUser);
             }
         }
 
-        public static void ReadFromFile()
+        public static User ReadFormFile()
         {
-            
+            User localUser;
+            JsonSerializer serializer = new JsonSerializer();
+            using (StreamReader sr = new StreamReader(@"./data.json"))
+            {
+                localUser = (User) serializer.Deserialize(sr, typeof(User));
+            }
+
+            return localUser;
         }
     }
 }

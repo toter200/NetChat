@@ -5,15 +5,14 @@ namespace NCSharedlib
 {
     public class Chat
     {
-        public User User1 { get; private set; }
-        public User User2 { get; private set; }
+        
+        public User Reciever { get; private set; }
 
         public List<Message> msgList { get; private set; }
 
-        public Chat(User u1, User u2)
+        public Chat(User u2)
         {
-            this.User1 = u1;
-            this.User2 = u2;
+            this.Reciever = u2;
             msgList = new List<Message>();
         }
 

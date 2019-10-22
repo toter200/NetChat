@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/NCSharedlib.csproj",
+    "projectUniqueName": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
     "projectName": "NCSharedlib",
-    "projectPath": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/NCSharedlib.csproj",
-    "outputPath": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/obj/",
+    "projectPath": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
+    "outputPath": "/home/daniel/NetChat/NCSharedlib/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.2"

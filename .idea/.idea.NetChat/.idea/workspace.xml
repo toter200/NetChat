@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/NetChat/v16/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/NCSharedlib.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetChat.sync/NetChat.console1.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +18,78 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <marker date="1571758417588" expanded="true" signature="6:66" ph="..." />
+                <marker date="1571758417588" expanded="true" signature="88:703" ph="{...}" />
+                <marker date="1571758417588" expanded="true" signature="112:701" ph="{...}" />
+                <marker date="1571758417588" expanded="true" signature="268:363" ph="{...}" />
+                <marker date="1571758417588" expanded="true" signature="401:496" ph="{...}" />
+                <marker date="1571758417588" expanded="true" signature="525:693" ph="{...}" />
+                <marker date="1571758417588" expanded="true" signature="608:683" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <marker date="1571758077098" expanded="true" signature="6:69" ph="..." />
+                <marker date="1571758077098" expanded="true" signature="91:807" ph="{...}" />
+                <marker date="1571758077098" expanded="true" signature="131:805" ph="{...}" />
+                <marker date="1571758077098" expanded="true" signature="192:439" ph="{...}" />
+                <marker date="1571758077098" expanded="true" signature="361:429" ph="{...}" />
+                <marker date="1571758077098" expanded="true" signature="482:799" ph="{...}" />
+                <marker date="1571758077098" expanded="true" signature="666:758" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+              <folding>
+                <marker date="1571758520734" expanded="false" signature="6:47" ph="..." />
+                <marker date="1571758520734" expanded="true" signature="69:2069" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="93:2067" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
+                <marker date="1571758520734" expanded="true" signature="420:539" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="579:628" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="686:734" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="793:875" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="913:2061" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="999:1158" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="1059:1144" ph="{...}" />
+                <marker date="1571758520734" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -41,10 +97,10 @@
         <option value="$PROJECT_DIR$/NetChat.sln" />
         <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
         <option value="$PROJECT_DIR$/NetChat.sync/Message.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
       </list>
     </option>
   </component>
@@ -55,7 +111,40 @@
       </set>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1997" />
+    <option name="y" value="28" />
+    <option name="width" value="1400" />
+    <option name="height" value="996" />
+  </component>
   <component name="ProjectId" id="1SYAhk2JcrKuCU4wi7EaDqaIyAR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -107,8 +196,52 @@
       <workItem from="1571730647057" duration="204000" />
       <workItem from="1571730902725" duration="147000" />
       <workItem from="1571731077991" duration="4314000" />
+      <workItem from="1571757141759" duration="1399000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1559000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="28" width="1920" height="996" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2529412" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.329849" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5005348" side_tool="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.49946523" weight="0.329849" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -121,8 +254,28 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -140,5 +293,60 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <marker date="1571758417588" expanded="true" signature="6:66" ph="..." />
+            <marker date="1571758417588" expanded="true" signature="88:703" ph="{...}" />
+            <marker date="1571758417588" expanded="true" signature="112:701" ph="{...}" />
+            <marker date="1571758417588" expanded="true" signature="268:363" ph="{...}" />
+            <marker date="1571758417588" expanded="true" signature="401:496" ph="{...}" />
+            <marker date="1571758417588" expanded="true" signature="525:693" ph="{...}" />
+            <marker date="1571758417588" expanded="true" signature="608:683" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+          <folding>
+            <marker date="1571758520734" expanded="false" signature="6:47" ph="..." />
+            <marker date="1571758520734" expanded="true" signature="69:2069" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="93:2067" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
+            <marker date="1571758520734" expanded="true" signature="420:539" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="579:628" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="686:734" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="793:875" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="913:2061" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="999:1158" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="1059:1144" ph="{...}" />
+            <marker date="1571758520734" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <marker date="1571758077098" expanded="true" signature="6:69" ph="..." />
+            <marker date="1571758077098" expanded="true" signature="91:807" ph="{...}" />
+            <marker date="1571758077098" expanded="true" signature="131:805" ph="{...}" />
+            <marker date="1571758077098" expanded="true" signature="192:439" ph="{...}" />
+            <marker date="1571758077098" expanded="true" signature="361:429" ph="{...}" />
+            <marker date="1571758077098" expanded="true" signature="482:799" ph="{...}" />
+            <marker date="1571758077098" expanded="true" signature="666:758" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
