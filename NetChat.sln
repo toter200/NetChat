@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.console1", "NetChat.console1\NetChat.console1.csproj", "{7D0AFAE8-CF63-4FA1-9F67-2C7C8A6281C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.sync", "NetChat.sync\NetChat.sync.csproj", "{7D0AFAE8-CF63-4FA1-9F67-2C7C8A6281C5}"
+Endproject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C213D6FC-CAEF-43EB-A714-728FAA907D90}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetChat.console2", "NetChat.console2\NetChat.console2.csproj", "{3B2A470B-47C6-4820-882C-440E1CCD257A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCSharedlib", "NCSharedlib\NCSharedlib.csproj", "{7CF65CEE-4F50-46CE-BAD0-7B9EA45F77C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
