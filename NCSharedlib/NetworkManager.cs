@@ -3,12 +3,13 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using NetChat.NCSharedlib;
 
 namespace NCSharedlib
 {
-    public class NetworkingManager
+    public static class NetworkingManager
     {
-        private void StartTcpListenerThread(IPAddress ip, int port)
+        private static void StartTcpListenerThread(IPAddress ip, int port)
         {
             var tcpListener = new TcpListener(ip, port);
             tcpListener.Start();
@@ -30,7 +31,7 @@ namespace NCSharedlib
             tcpListenerThread.Start();
         }
         
-        private void SendMessage(string text, IPAddress ip, int port)
+        private static void SendMessage(string text, IPAddress ip, int port)
         {
             IPEndPoint remote = new IPEndPoint(ip, port);
             var tcpSendingThread = new Thread(() =>
@@ -43,8 +44,8 @@ namespace NCSharedlib
             });
             tcpSendingThread.Start();
         }
-           
-        
+
+
     }
     
     
