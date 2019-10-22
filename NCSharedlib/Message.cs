@@ -1,18 +1,18 @@
 using System;
 
-namespace NetChat.console1
+namespace NetChat.NCSharedlib
 {
     public class Message
     {
         public string Content { get; private set; }
-        public int SenderId { get; private set; }
+        public int UserId { get; private set; }
         public DateTime Timestamp { get; private set; }
         public bool Synchronized { get; private set; }
 
         public Message(string text, int id)
         {
             this.Content = text;
-            this.SenderId = id;
+            this.UserId = id;
             Timestamp = DateTime.Now;
         }
         public void IsSynchronized()
