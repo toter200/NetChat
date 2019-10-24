@@ -2,9 +2,16 @@ using System.Diagnostics;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using NCSharedlib;
+
+
+/*TODO:
+ create method to display chat messages;
+ Fix the layout of elements in the GUI;
+ Use the network manager and test if messages are recieved*/
 
 namespace Avalonia.NETCoreApp
 {
@@ -17,7 +24,6 @@ namespace Avalonia.NETCoreApp
 
         private void InitializeComponent()
         {
-            Canvas mainCanvas;
             AvaloniaXamlLoader.Load(this);
             
             
@@ -28,30 +34,24 @@ namespace Avalonia.NETCoreApp
             ch.Add(msg1);
             ch.Add(msg2);
             
-            mainCanvas = this.FindControl<Canvas>("mainCanvas");
             //Button b = new Button();
             //b.Content = "new Button";
             //mainCanvas.Children.Add(b);
             
-            ShowChat(mainCanvas, ch);
-            
-            
-            
+            //ShowChat(chatWindow, ch);
         }
 
-        private void ShowChat(Canvas canvas, Chat chat)
+        private void ShowChat(StackPanel window, Chat chat)
         {
-            Thickness t = new Thickness(0);
-            
+            window.HorizontalAlignment = HorizontalAlignment.Center;
             int padding = 0;
             foreach (Message msg in chat.msgList)
             {
-                
-                TextBox tb = new TextBox();
+                TextBlock tb = new TextBlock();
                 tb.Text = msg.Content;
-                tb.Margin = t;
-                canvas.Children.Add(tb);
-                t += new Thickness(50);
+                window.Children.Add(tb);
+                //canvas.Children.Add(tb);
+                //t += new Thickness(0, 20, 0, 0);
             }
         }
     }

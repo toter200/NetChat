@@ -5,8 +5,13 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
         x:Class="Avalonia.NETCoreApp.MainWindow"
         Title="NetChat - P1">
-    <Canvas Name="mainCanvas">
         
-    </Canvas>
-   
+        <Grid ColumnDefinitions="100, 1.5*, 4*" RowDefinitions="Auto,Auto,Auto">
+            <StackPanel Name="mainWindow" Grid.Row="1" Grid.Column="1" Orientation="Vertical"  Margin="5">
+                
+            </StackPanel>
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1"/>
+            <Button Grid.Row="2" Grid.Column="2">
+            </Button>
+        </Grid>
 </Window>
