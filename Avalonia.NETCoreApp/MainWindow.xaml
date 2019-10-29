@@ -6,12 +6,13 @@
         x:Class="Avalonia.NETCoreApp.MainWindow"
         Title="NetChat - P1">
         
-        <Grid ColumnDefinitions="100, 1.5*, 4*" RowDefinitions="Auto,Auto,Auto">
-            <StackPanel Name="mainWindow" Grid.Row="1" Grid.Column="1" Orientation="Vertical"  Margin="5">
+        <Grid ColumnDefinitions="100*, 50" RowDefinitions="50*, 50">
+            <StackPanel Name="chatWindow" Grid.Row="0" Grid.Column="0" Orientation="Vertical"  Margin="5">
                 
             </StackPanel>
-            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1"/>
-            <Button Grid.Row="2" Grid.Column="2">
+            <TextBox Name="MessageInput" AcceptsReturn="True" TextWrapping="Wrap" Grid.Row="1" Grid.Column="0"/>
+            <Button Grid.Row="1" Grid.Column="1" Click="OnButtonSend" >
+                Send
             </Button>
         </Grid>
 </Window>

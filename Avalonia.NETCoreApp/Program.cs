@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Avalonia;
 using Avalonia.Logging.Serilog;
 using NCSharedlib;

@@ -9,10 +9,10 @@ namespace NCSharedlib
         public DateTime Timestamp { get; private set; }
         public bool Synchronized { get; private set; }
 
-        public Message(string text, int id)
+        public Message(string text, int Userid)
         {
             this.Content = text;
-            this.UserId = id;
+            this.UserId = Userid;
             Timestamp = DateTime.Now;
         }
         public void IsSynchronized()

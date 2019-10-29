@@ -8,7 +8,7 @@ namespace NCSharedlib
 {
     public static class NetworkingManager
     {
-        private static void StartTcpListenerThread(IPAddress ip, int port)
+        public static void StartTcpListenerThread(IPAddress ip, int port)
         {
             var tcpListener = new TcpListener(ip, port);
             tcpListener.Start();
@@ -30,7 +30,7 @@ namespace NCSharedlib
             tcpListenerThread.Start();
         }
         
-        private static void SendMessage(string text, IPAddress ip, int port)
+        public static void SendMessage(string text, IPAddress ip, int port)
         {
             IPEndPoint remote = new IPEndPoint(ip, port);
             var tcpSendingThread = new Thread(() =>

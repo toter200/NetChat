@@ -7,12 +7,14 @@ namespace NCSharedlib
     {
         
         public User Reciever { get; private set; }
+        public User localUser { get; private set; }
 
         public List<Message> msgList { get; private set; }
 
-        public Chat(User u2)
+        public Chat(User localUser, User u2)
         {
             this.Reciever = u2;
+            this.localUser = localUser;
             msgList = new List<Message>();
         }
 
@@ -20,6 +22,7 @@ namespace NCSharedlib
         {
             msgList.Add(msg);
             msgList.OrderBy(x=>x.Timestamp);
+            //NetworkingManager.SendMessage(msg.Content, Reciever.ip, Reciever.port);
         }
 
         public void Print()

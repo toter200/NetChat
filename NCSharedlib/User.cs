@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
+
 namespace NCSharedlib
 {
     public class User
     {
         public string mail { get; private set; }
         public int Id { get; private set; }
-
+        public IPAddress ip;
+        public static int port = 2311;
         public List<Chat> Chats;
+
+        private static int IdCounter = 0;
         
 
         //Think the devices throught, adding a new chat for every device doesnt make sense.
@@ -17,6 +22,11 @@ namespace NCSharedlib
             this.mail = mail;
             this.Id = id;
             this.Chats = new List<Chat>();
+        }
+
+        public User(string mail, IPAddress ip, int port)
+        {
+            
         }
 
         public void NewChat(Chat chat)
