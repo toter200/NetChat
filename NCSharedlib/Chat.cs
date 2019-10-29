@@ -1,19 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace NetChat.NCSharedlib
+namespace NCSharedlib
 {
     public class Chat
     {
-        public User User1 { get; private set; }
-        public User User2 { get; private set; }
+        
+        public User Reciever { get; private set; }
 
         public List<Message> msgList { get; private set; }
 
-        public Chat(User u1, User u2)
+        public Chat(User u2)
         {
-            this.User1 = u1;
-            this.User2 = u2;
+            this.Reciever = u2;
             msgList = new List<Message>();
         }
 
@@ -23,7 +22,7 @@ namespace NetChat.NCSharedlib
             msgList.OrderBy(x=>x.Timestamp);
         }
 
-        public void print()
+        public void Print()
         {
             msgList.Sort();
             foreach (Message msg in msgList)

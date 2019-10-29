@@ -1,6 +1,6 @@
 using System;
 
-namespace NetChat.NCSharedlib
+namespace NCSharedlib
 {
     public class Message
     {
