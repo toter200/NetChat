@@ -9,7 +9,7 @@ namespace NCSharedlib
         public string mail { get; private set; }
         public int Id { get; private set; }
         public IPAddress ip;
-        public static int port = 2311;
+        public static int port = 48000;
         public List<Chat> Chats;
 
         private static int IdCounter;

@@ -28,16 +28,16 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-
+            NetworkingManager.StartTcpListenerThread(IPAddress.Parse("192.168.0.102"), User.port);
             chatWindow = this.FindControl<StackPanel>("chatWindow");
             
-            User us1 = new User("random mail", 1, IPAddress.Parse("192.168.0.103"));
+            User us1 = new User("random mail", 1, IPAddress.Parse("192.168.0.109"));
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.0.102"));
             Chat ch = new Chat(localUser, us1);
             Message msg1 = new Message("first message", 0);
             Message msg2 = new Message("seccond message", 1);
-            localUser.SendMessage(msg1, ch);
-            us1.SendMessage(msg2, ch);
+            //localUser.SendMessage(msg1, ch);
+            //us1.SendMessage(msg2, ch);
             
             ShowChat(chatWindow, ch);
         }
@@ -61,6 +61,10 @@ namespace Avalonia.NETCoreApp
             }
         }
 
+        public void NewMessage(Message msg)
+        {
+            currentChat.Add(msg);
+        }
         private void OnButtonSend(object sender, EventArgs e)
         {
             TextBox tbox = this.FindControl<TextBox>("MessageInput");

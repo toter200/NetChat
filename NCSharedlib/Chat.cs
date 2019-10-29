@@ -22,7 +22,7 @@ namespace NCSharedlib
         {
             msgList.Add(msg);
             msgList.OrderBy(x=>x.Timestamp);
-            //NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port);
+            NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port);
         }
 
         public void Print()
