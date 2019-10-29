@@ -45,7 +45,46 @@ namespace NCSharedlib
             tcpSendingThread.Start();
         }
 
+        private static void ReadFile(string path)
+        {
+            const int bufsize = 8192;
 
+            var buffer = new byte[bufsize];
+            NetworkStream ns = socket.GetStream();
+
+            using (var s = File.OpenRead(path))
+            {
+                int actuallyRead;
+                while ((actuallyRead = s.Read(buffer, 0, bufsize)) > 0)
+                {
+                    ns.Write(buffer, 0, actuallyRead);
+                }
+            }
+            ns.Flush();
+        }
+
+        private static void SendFile(IPAddress address, int port, data imageToSend)
+        {
+            TcpClient client = new TcpClient();
+            try
+            {
+                client.Connect(address, port);
+                NetworkStream stream = client.GetStream();
+                MessageData data = new MessageData(imageToSend);
+
+                IFormatter formatter = new BinaryFormatter();
+                while (true)
+                {
+                    formatter.Serialize(stream, data);
+                    Thread.Sleep(1000);
+                    data.GetNewImage();
+                }
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
     }
     
     
