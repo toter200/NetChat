@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetChat.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NetChat.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,13 +45,13 @@
         <option value="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
-        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +145,7 @@
       <workItem from="1571759916082" duration="7167000" />
       <workItem from="1572357103911" duration="541000" />
       <workItem from="1572357661232" duration="84000" />
-      <workItem from="1572357761987" duration="7828000" />
+      <workItem from="1572357761987" duration="12247000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -180,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572357158660</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished Prototype on localmashine">
+      <created>1572370163174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572370163174</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +223,8 @@
     <MESSAGE value="Created Avalonia UI proj" />
     <MESSAGE value="Started development on P1" />
     <MESSAGE value="initial commit new PC" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit new PC" />
+    <MESSAGE value="finished Prototype on localmashine" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished Prototype on localmashine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Net;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -30,13 +31,13 @@ namespace Avalonia.NETCoreApp
 
             chatWindow = this.FindControl<StackPanel>("chatWindow");
             
-            User us1 = new User("random mail", 2);
-            localUser = new User("new mail", 1);
+            User us1 = new User("random mail", 1, IPAddress.Parse("192.168.0.103"));
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.0.102"));
             Chat ch = new Chat(localUser, us1);
-            Message msg1 = new Message("first message", 1);
-            Message msg2 = new Message("seccond message", 2);
-            ch.Add(msg1);
-            ch.Add(msg2);
+            Message msg1 = new Message("first message", 0);
+            Message msg2 = new Message("seccond message", 1);
+            localUser.SendMessage(msg1, ch);
+            us1.SendMessage(msg2, ch);
             
             ShowChat(chatWindow, ch);
         }

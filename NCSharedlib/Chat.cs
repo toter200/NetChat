@@ -18,11 +18,11 @@ namespace NCSharedlib
             msgList = new List<Message>();
         }
 
-        public void Add(Message msg)
+        internal void Add(Message msg)
         {
             msgList.Add(msg);
             msgList.OrderBy(x=>x.Timestamp);
-            //NetworkingManager.SendMessage(msg.Content, Reciever.ip, Reciever.port);
+            //NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port);
         }
 
         public void Print()

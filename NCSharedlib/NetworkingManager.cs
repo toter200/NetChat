@@ -21,10 +21,14 @@ namespace NCSharedlib
                         var currentConnection = tcpListener.AcceptTcpClient();
                         var stream = currentConnection.GetStream();
                         stream.Read(bytes, 0, bytes.Length);
+                        if (new byte[1024] != bytes)
+                        {
+                            
+                        }
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(e.Message);
+                        throw;
                     }
             });
             tcpListenerThread.Start();
