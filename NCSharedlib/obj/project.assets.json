@@ -688,24 +688,30 @@
     ]
   },
   "packageFolders": {
-    "/home/daniel/.nuget/packages/": {}
+    "C:\\Users\\Luca\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/NCSharedlib.csproj",
+      "projectUniqueName": "D:\\Schule\\4cHITx\\ITP\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
       "projectName": "NCSharedlib",
-      "projectPath": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/NCSharedlib.csproj",
-      "packagesPath": "/home/daniel/.nuget/packages/",
-      "outputPath": "/home/daniel/Nextcloud/HTL-2019-20/NetChat/NCSharedlib/obj/",
+      "projectPath": "D:\\Schule\\4cHITx\\ITP\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
+      "packagesPath": "C:\\Users\\Luca\\.nuget\\packages\\",
+      "outputPath": "D:\\Schule\\4cHITx\\ITP\\NetChat\\NCSharedlib\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/daniel/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
