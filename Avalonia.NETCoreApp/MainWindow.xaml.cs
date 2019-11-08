@@ -15,10 +15,23 @@ namespace Avalonia.NETCoreApp
 {
     public class MainWindow : Window
     {
+        /// <summary>
+        /// Local User
+        /// </summary>
         public User localUser;
+        /// <summary>
+        /// Main chat window in current View
+        /// </summary>
         private StackPanel chatWindow;
+        /// <summary>
+        /// Messages in current chat window
+        /// </summary>
         private ObservableCollection<Message> currentChat;
-        
+        /// <summary>
+        /// Networking manager for current session
+        /// </summary>
+        private NetworkingManager netManager;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,8 +41,13 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-            NetworkingManager.StartTcpListenerThread(IPAddress.Parse("192.168.0.102"), User.port);
+            //Networkingmanager initialization
+            netManager = new NetworkingManager(new Clientmanager());
+            //Starting listener on the predifined Port and the current user IP
+            netManager.StartTcpListenerThread(IPAddress.Parse("192.168.43.228"), User.port);
+            //Saving the StackPnael control in a variable
             chatWindow = this.FindControl<StackPanel>("chatWindow");
+            
             
             User us1 = new User("random mail", 1, IPAddress.Parse("192.168.0.109"));
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.0.102"));

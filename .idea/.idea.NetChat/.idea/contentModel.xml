@@ -9,6 +9,7 @@
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="Avalonia.NETCoreApp.csproj" t="IncludeRecursive" />
+        <e p="Clientmanager.cs" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="Program.cs" t="Include" />
@@ -24,6 +25,7 @@
       </e>
       <e p="NCSharedlib" t="IncludeRecursive">
         <e p="Chat.cs" t="Include" />
+        <e p="IClientNetwork.cs" t="Include" />
         <e p="MemoryManager.cs" t="Include" />
         <e p="Message.cs" t="Include" />
         <e p="NCSharedlib.csproj" t="IncludeRecursive" />

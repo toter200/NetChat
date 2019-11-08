@@ -6,9 +6,15 @@ using System.Threading;
 
 namespace NCSharedlib
 {
-    public static class NetworkingManager
+    public class NetworkingManager
     {
-        public static void StartTcpListenerThread(IPAddress ip, int port)
+
+        private IClientNetwork reciever;
+        public NetworkingManager(IClientNetwork msgReciever)
+        {
+            reciever = msgReciever;
+        }
+        public void StartTcpListenerThread(IPAddress ip, int port)
         {
             var tcpListener = new TcpListener(ip, port);
             tcpListener.Start();
@@ -23,10 +29,11 @@ namespace NCSharedlib
                         stream.Read(bytes, 0, bytes.Length);
                         if (new byte[1024] != bytes)
                         {
-                            
+                            Message msg = new Message(Encoding.UTF8.GetString(bytes), 1);
+                            reciever.MsgRecieved(msg);
                         }
                     }
-                    catch (Exception e)
+                    catch
                     {
                         throw;
                     }
