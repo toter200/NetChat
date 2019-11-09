@@ -6,8 +6,18 @@ namespace NCSharedlib
 {
     public class User
     {
+        /// <summary>
+        /// E-mail used by User to Register
+        /// </summary>
         public string mail { get; private set; }
+        
+        /// <summary>
+        /// user id set by server
+        /// </summary>
         public int Id { get; private set; }
+        /// <summary>
+        /// Constantly changin ip address 
+        /// </summary>
         public IPAddress ip;
         public static int port = 48000;
         public List<Chat> Chats;

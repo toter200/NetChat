@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.NETCoreApp", "Aval
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCSharedlib", "NCSharedlib\NCSharedlib.csproj", "{BD3103B1-E96B-44E6-906F-810AB69C1F55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{E8C62D38-4C58-4613-A9A8-0418CEC15C17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,5 +63,17 @@ Global
 		{BD3103B1-E96B-44E6-906F-810AB69C1F55}.Release|x64.Build.0 = Release|Any CPU
 		{BD3103B1-E96B-44E6-906F-810AB69C1F55}.Release|x86.ActiveCfg = Release|Any CPU
 		{BD3103B1-E96B-44E6-906F-810AB69C1F55}.Release|x86.Build.0 = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|x64.Build.0 = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|x64.Build.0 = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8C62D38-4C58-4613-A9A8-0418CEC15C17}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

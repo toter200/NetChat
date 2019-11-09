@@ -32,6 +32,8 @@ namespace Avalonia.NETCoreApp
         /// </summary>
         private NetworkingManager netManager;
 
+        public User us1;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,15 +44,15 @@ namespace Avalonia.NETCoreApp
         {
             AvaloniaXamlLoader.Load(this);
             //Networkingmanager initialization
-            netManager = new NetworkingManager(new Clientmanager());
+            netManager = new NetworkingManager(new Clientmanager(currentChat));
             //Starting listener on the predifined Port and the current user IP
             netManager.StartTcpListenerThread(IPAddress.Parse("192.168.43.228"), User.port);
             //Saving the StackPnael control in a variable
             chatWindow = this.FindControl<StackPanel>("chatWindow");
             
             
-            User us1 = new User("random mail", 1, IPAddress.Parse("192.168.0.109"));
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.0.102"));
+            us1 = new User("random mail", 1, IPAddress.Parse("0.0.0.0"));
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.228"));
             Chat ch = new Chat(localUser, us1);
             Message msg1 = new Message("first message", 0);
             Message msg2 = new Message("seccond message", 1);
@@ -85,9 +87,17 @@ namespace Avalonia.NETCoreApp
         }
         private void OnButtonSend(object sender, EventArgs e)
         {
+            try
+            {
+
             TextBox tbox = this.FindControl<TextBox>("MessageInput");
             Message msg = new Message(tbox.Text, localUser.Id);
             currentChat.Add(msg);
+            }
+            catch
+            {
+                throw;
+            }
         }
         private void ChatChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
