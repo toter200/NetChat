@@ -177,7 +177,7 @@
       <workItem from="1573286636880" duration="685000" />
       <workItem from="1573287744284" duration="10136000" />
       <workItem from="1573542487789" duration="235000" />
-      <workItem from="1573543830592" duration="7412000" />
+      <workItem from="1573543830592" duration="9968000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573548807732</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="finishes recieving first harfcoded message">
+      <created>1573551677746</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573551677746</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +311,8 @@
     <MESSAGE value="commited test app" />
     <MESSAGE value="finished testing Console app dor P-1" />
     <MESSAGE value="finished Dispatcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished Dispatcher" />
+    <MESSAGE value="finishes recieving first harfcoded message" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishes recieving first harfcoded message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,6 +321,32 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NCSharedlib/Chat.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" initialLine="39">
+            <startOffsets>
+              <option value="1123" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NCSharedlib/Chat.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" initialLine="41">
+            <startOffsets>
+              <option value="1198" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1265" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
