@@ -11,37 +11,38 @@ namespace NCServerLibrary
 {
     class ServerManager
     {
-        /*
-        public static string GetIp(string email)
+        static string connectionString = "Server=172.0.0.1;Database=ncdb;Uid=root;Pwd=;";
+
+        public static void CreateDatabase()
         {
-            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
-            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username OR u.mail = @email;";
+            string connectionString = "Server=172.0.0.1;Database=;Uid=root;Pwd=;";
+            string query = "CREATE DATABASE ncdb; use ncdb; CREATE TABLE usr (id INT(6) AUTO_INCREMENT PRIMARY KEY, mail VARCHAR(60) NOT NULL, username VARCHAR(60) NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1); CREATE TABLE dev (devID INT(6) AUTO_INCREMENT PRIMARY KEY, userID INT(6) NOT NULL REFERENCES usr(id), ipAddress VARCHAR(20) NOT NULL); SHOW COLUMNS FROM usr; SHOW COLUMNS FROM dev;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
-                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
-                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
                 using (var com = new MySqlCommand(query, con))
                 {
-                    com.Parameters.Add(usr);
-                    com.Parameters.Add(mail);
-                    var r = com.ExecuteReader();
-                    while (r.Read())
-                    {
-                        var x = r.GetFieldValue<string>(0);
-
-                        return x;
-                    }
+                    int i = com.ExecuteNonQuery();
                 }
-                return "172.0.0.1";
+
             }
         }
-        */
-        static string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+        public static void DeleteDatabase()
+        {
+            string query = "drop DATABASE ncdb;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                using (var com = new MySqlCommand(query, con))
+                {
+                    int i = com.ExecuteNonQuery();
+                }
 
+            }
+        }
         public static bool GetStatus(string email)
         {
-            string query = "SELECT * FROM usr WHERE mail = @email;";
+            string query = "SELECT status FROM usr WHERE mail = @email;";
 
             using (var con = new MySqlConnection(connectionString))
             {
@@ -54,14 +55,12 @@ namespace NCServerLibrary
                     while (r.Read())
                     {
                         var x = r.GetFieldValue<int>(0);
-
                         return x == 1;
                     }
                 }
                 return false;
             }
         }
-
         public static string GetIp(string email)
         {
             string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.mail = @email;";
@@ -104,7 +103,6 @@ namespace NCServerLibrary
                 return "User";
             }
         }
-
         public static string GetEmail(string username)
         {
             string query = "SELECT mail FROM usr WHERE username = @username;";
@@ -128,7 +126,6 @@ namespace NCServerLibrary
                 return "Mail";
             }
         }
-
         public static void CreateUser(string ipad, string username, string email)
         {
             string query = "INSERT INTO usr (mail, username, status) VALUES (@mail, @username, 1);";
@@ -156,7 +153,6 @@ namespace NCServerLibrary
                 }
             }
         }
-
         public static void AlterEmail(string newEmail, string username)
         {
             string query = "UPDATE usr SET mail = @mail WHERE username = @username;";
@@ -175,7 +171,6 @@ namespace NCServerLibrary
 
             }
         }
-
         public static void AlterUsername(string newUsername, string email)
         {
             string query = "UPDATE usr SET username = @username WHERE mail = @mail;";
@@ -194,10 +189,9 @@ namespace NCServerLibrary
 
             }
         }
-
         public static void AlterIp(string newIp, string email)
         {
-            string query = "UPDATE usr SET username = @username WHERE mail = @mail;";
+            string query = "UPDATE dev SET ipAddress = @ip WHERE userID = (SELECT id FROM usr WHERE mail = @mail);";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
@@ -208,6 +202,47 @@ namespace NCServerLibrary
                 {
                     com.Parameters.Add(mail);
                     com.Parameters.Add(ip);
+                    int i = com.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public static void AlterStatus(int stat, string email)
+        {
+            string query = "UPDATE usr SET status = @stat WHERE mail = @mail;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+                var status = new MySqlParameter("@stat", MySqlDbType.Int32) { Value = stat };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.Parameters.Add(status);
+                    int i = com.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public static void AlterStatusAuto(string email)
+        {
+            string query = "UPDATE usr SET status = @stat WHERE mail = @mail;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                int stat = 1;
+                if (GetStatus(email))
+                {
+                    stat = 0;
+                }
+                con.Open();
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+                var status = new MySqlParameter("@stat", MySqlDbType.Int32) { Value = stat };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.Parameters.Add(status);
                     int i = com.ExecuteNonQuery();
                 }
 

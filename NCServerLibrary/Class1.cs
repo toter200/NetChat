@@ -13,6 +13,7 @@ namespace NetChatServerLibrary
     {
         static void Main()
         {
+            /*
             string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
             string query = "SELECT * FROM x WHERE x.ID = @param1";
     
@@ -38,6 +39,7 @@ namespace NetChatServerLibrary
                     int nq = com.ExecuteNonQuery();
                 }
             }
+            */
 
         }
     }
