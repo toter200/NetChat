@@ -4,8 +4,6 @@
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +177,7 @@
       <workItem from="1573286636880" duration="685000" />
       <workItem from="1573287744284" duration="10136000" />
       <workItem from="1573542487789" duration="235000" />
-      <workItem from="1573543830592" duration="4947000" />
+      <workItem from="1573543830592" duration="7412000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -251,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573544173652</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished Dispatcher">
+      <created>1573548807731</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573548807732</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +303,8 @@
     <MESSAGE value="Reworked Networking Manager" />
     <MESSAGE value="commited test app" />
     <MESSAGE value="finished testing Console app dor P-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished testing Console app dor P-1" />
+    <MESSAGE value="finished Dispatcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished Dispatcher" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

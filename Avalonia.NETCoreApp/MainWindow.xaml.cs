@@ -38,8 +38,10 @@ namespace Avalonia.NETCoreApp
 
         public MainWindow()
         {
+            currentChat = new ObservableCollection<Message>();
             InitializeComponent();
             currentChat.CollectionChanged += ChatChanged;
+            //currentChat.CollectionChanged += ChatChanged;
         }
 
         private void InitializeComponent()
@@ -53,6 +55,7 @@ namespace Avalonia.NETCoreApp
             Message msg1 = new Message("first message", 0);
             Message msg2 = new Message("seccond message", 1);
             //localUser.SendMessage(msg1, ch);
+            
             Dispatcher.UIThread.InvokeAsync(() => ShowChat(chatWindow, ch));
             
             //Networkingmanager initialization
@@ -65,7 +68,6 @@ namespace Avalonia.NETCoreApp
 
         private void ShowChat(StackPanel window, Chat chat)
         {
-            currentChat = new ObservableCollection<Message>(chat.msgList);
             foreach (Message msg in chat.msgList)
             {
                 TextBlock tb = new TextBlock();
@@ -103,20 +105,25 @@ namespace Avalonia.NETCoreApp
         }
         private void ChatChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (Message msg in e.NewItems)
-            {
-                TextBlock tb = new TextBlock();
-                if (msg.UserId == localUser.Id)
+            Dispatcher.UIThread.InvokeAsync(() =>
                 {
-                    tb.HorizontalAlignment = HorizontalAlignment.Right;
+                    foreach (Message msg in e.NewItems)
+                    {
+                        TextBlock tb = new TextBlock();
+                        if (msg.UserId == localUser.Id)
+                        {
+                            tb.HorizontalAlignment = HorizontalAlignment.Right;
+                        }
+                        else
+                        {
+                            tb.HorizontalAlignment = HorizontalAlignment.Left;
+                        }
+
+                        tb.Text = msg.Content;
+                        chatWindow.Children.Add(tb);
+                    }
                 }
-                else
-                {
-                    tb.HorizontalAlignment = HorizontalAlignment.Left;
-                }
-                tb.Text = msg.Content;
-                chatWindow.Children.Add(tb);
-            }
+            );
         }
         
     }
