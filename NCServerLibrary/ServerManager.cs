@@ -157,23 +157,61 @@ namespace NCServerLibrary
             }
         }
 
-        public static void AlterEmail(string oldEmail, string newEmail)
+        public static void AlterEmail(string newEmail, string username)
         {
-            string query = "SELECT username FROM usr WHERE mail = @email;";
+            string query = "UPDATE usr SET mail = @mail WHERE username = @username;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
-                var nmail = new MySqlParameter("@nemail", MySqlDbType.VarChar) { Value = newEmail };
-                var omail = new MySqlParameter("@oemail", MySqlDbType.VarChar) { Value = oldEmail };
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = newEmail };
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
 
                 using (var com = new MySqlCommand(query, con))
                 {
-                    com.Parameters.Add(nmail);
-                    com.Parameters.Add(omail);
+                    com.Parameters.Add(mail);
+                    com.Parameters.Add(usr);
                     int i = com.ExecuteNonQuery();
                 }
+
             }
         }
 
+        public static void AlterUsername(string newUsername, string email)
+        {
+            string query = "UPDATE usr SET username = @username WHERE mail = @mail;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = newUsername };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.Parameters.Add(usr);
+                    int i = com.ExecuteNonQuery();
+                }
+
+            }
+        }
+
+        public static void AlterIp(string newIp, string email)
+        {
+            string query = "UPDATE usr SET username = @username WHERE mail = @mail;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+                var ip = new MySqlParameter("@ip", MySqlDbType.VarChar) { Value = newIp };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.Parameters.Add(ip);
+                    int i = com.ExecuteNonQuery();
+                }
+
+            }
+        }
     }
 }
