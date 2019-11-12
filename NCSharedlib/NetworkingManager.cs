@@ -28,7 +28,7 @@ namespace NCSharedlib
                         Socket client = listener.AcceptSocket();
 
                         int size = client.Receive(bytes);
-                        reciever.MsgRecieved(new Message(Encoding.UTF8.GetString(bytes), 1));
+                        reciever.MsgRecieved(new Message(Encoding.UTF8.GetString(bytes, 0, size), 1));
                         client.Close();
                     }
                 });

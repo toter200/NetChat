@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevin\\source\\repos\\toter200\\NetChat\\NCSharedlib\\NCSharedlib.csproj": {}
+    "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevin\\source\\repos\\toter200\\NetChat\\NCSharedlib\\NCSharedlib.csproj": {
+    "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\source\\repos\\toter200\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
+        "projectUniqueName": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
         "projectName": "NCSharedlib",
-        "projectPath": "C:\\Users\\kevin\\source\\repos\\toter200\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\source\\repos\\toter200\\NetChat\\NCSharedlib\\obj\\",
+        "projectPath": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
+        "packagesPath": "/home/daniel/.nuget/packages/",
+        "outputPath": "/home/daniel/NetChat/NCSharedlib/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+          "/home/daniel/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
