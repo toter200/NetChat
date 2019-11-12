@@ -19,8 +19,6 @@ namespace NCSharedlib
             TcpListener listener = new TcpListener(ip, port);
             listener.Start();
 
-
-                
                 var thread = new Thread(() =>
                 {
                     byte[] bytes = new byte[1024];
@@ -88,7 +86,7 @@ namespace NCSharedlib
             IPEndPoint remote = new IPEndPoint(ip, port);
             var tcpClient = new TcpClient();
             tcpClient.Connect(remote);
-            tcpClient.Client.Send(Encoding.UTF8.GetBytes("text"));
+            tcpClient.Client.Send(Encoding.UTF8.GetBytes(text));
             tcpClient.Client.Close();
             tcpClient.Close();
             //tcpClient.Client.Send(Encoding.UTF8.GetBytes(text));

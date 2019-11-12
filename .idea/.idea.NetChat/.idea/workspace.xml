@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestApp/Helper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetChat.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NetChat.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,9 +57,9 @@
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" />
-        <option value="$PROJECT_DIR$/TestApp/Program.cs" />
         <option value="$PROJECT_DIR$/TestApp/Helper.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
+        <option value="$PROJECT_DIR$/TestApp/Program.cs" />
       </list>
     </option>
   </component>
@@ -183,7 +176,9 @@
       <workItem from="1572947370624" duration="2074000" />
       <workItem from="1573217734176" duration="11402000" />
       <workItem from="1573286636880" duration="685000" />
-      <workItem from="1573287744284" duration="6705000" />
+      <workItem from="1573287744284" duration="10136000" />
+      <workItem from="1573542487789" duration="235000" />
+      <workItem from="1573543830592" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -234,7 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573218903009</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Reworked Networking Manager">
+      <created>1573294961744</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573294961745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commited test app">
+      <created>1573295195926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573295195926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +287,9 @@
     <MESSAGE value="finished Prototype on localmashine" />
     <MESSAGE value="finishing up P1 - TESTING" />
     <MESSAGE value="Started testing on P1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started testing on P1" />
+    <MESSAGE value="Reworked Networking Manager" />
+    <MESSAGE value="commited test app" />
+    <option name="LAST_COMMIT_MESSAGE" value="commited test app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -287,45 +298,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TestApp/Program.cs</url>
-          <line>14</line>
-          <properties documentPath="$PROJECT_DIR$/TestApp/Program.cs" initialLine="14">
-            <startOffsets>
-              <option value="465" />
-            </startOffsets>
-            <endOffsets>
-              <option value="524" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TestApp/Program.cs</url>
-          <line>15</line>
-          <properties documentPath="$PROJECT_DIR$/TestApp/Program.cs" initialLine="15">
-            <startOffsets>
-              <option value="537" />
-            </startOffsets>
-            <endOffsets>
-              <option value="617" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TestApp/Program.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/TestApp/Program.cs" initialLine="16">
-            <startOffsets>
-              <option value="630" />
-            </startOffsets>
-            <endOffsets>
-              <option value="687" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
