@@ -157,5 +157,23 @@ namespace NCServerLibrary
             }
         }
 
+        public static void AlterEmail(string oldEmail, string newEmail)
+        {
+            string query = "SELECT username FROM usr WHERE mail = @email;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var nmail = new MySqlParameter("@nemail", MySqlDbType.VarChar) { Value = newEmail };
+                var omail = new MySqlParameter("@oemail", MySqlDbType.VarChar) { Value = oldEmail };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(nmail);
+                    com.Parameters.Add(omail);
+                    int i = com.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
