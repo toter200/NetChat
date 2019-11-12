@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,159 +11,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding>
-                <marker date="1571758772752" expanded="false" signature="6:69" ph="..." />
-                <marker date="1571758772752" expanded="true" signature="91:807" ph="{...}" />
-                <marker date="1571758772752" expanded="true" signature="131:805" ph="{...}" />
-                <marker date="1571758772752" expanded="true" signature="192:439" ph="{...}" />
-                <marker date="1571758772752" expanded="true" signature="361:429" ph="{...}" />
-                <marker date="1571758772752" expanded="true" signature="482:799" ph="{...}" />
-                <marker date="1571758772752" expanded="true" signature="666:758" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <marker date="1571758672013" expanded="false" signature="6:100" ph="..." />
-                <marker date="1571758672013" expanded="true" signature="123:1442" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="167:1430" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="248:975" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="414:924" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="468:772" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="812:910" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="1061:1422" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="1194:1372" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NCSharedlib/Message.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding>
-                <marker date="1571758672013" expanded="true" signature="36:692" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="63:690" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="325:446" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="483:541" ph="{...}" />
-                <marker date="1571758672013" expanded="true" signature="583:684" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <marker date="1571763331244" expanded="true" signature="6:43" ph="..." />
-                <marker date="1571763331244" expanded="true" signature="74:240" ph="{...}" />
-                <marker date="1571763331244" expanded="true" signature="111:238" ph="{...}" />
-                <marker date="1571763331244" expanded="true" signature="159:222" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-              <folding>
-                <marker date="1571768511806" expanded="true" signature="6:165" ph="..." />
-                <marker date="1571768511806" expanded="true" signature="196:1500" ph="{...}" />
-                <marker date="1571768511806" expanded="true" signature="235:1498" ph="{...}" />
-                <marker date="1571768511806" expanded="true" signature="269:324" ph="{...}" />
-                <marker date="1571768511806" expanded="true" signature="368:1039" ph="{...}" />
-                <marker date="1571768511806" expanded="true" signature="831:939" ph="/* Button b = new Button(); ... */" />
-                <marker date="1571768511806" expanded="true" signature="1096:1492" ph="{...}" />
-                <marker date="1571768511806" expanded="true" signature="1242:1482" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding>
-                <marker date="1571768174091" expanded="true" signature="6:80" ph="..." />
-                <marker date="1571768174091" expanded="true" signature="111:942" ph="{...}" />
-                <marker date="1571768174091" expanded="true" signature="131:940" ph="{...}" />
-                <marker date="1571768174091" expanded="true" signature="146:354" ph="/* Initialization code. Don't use any Avalonia, third-party APIs or any ... */" />
-                <marker date="1571768174091" expanded="true" signature="698:807" ph="/* Your application's entry point. Here you can initialize your MVVM framework, DI ... */" />
-                <marker date="1571768174091" expanded="true" signature="875:934" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTest/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/NetChat.sln" />
-        <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
         <option value="$PROJECT_DIR$/NetChat.sync/Message.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/NCSharedlib/ClientNetwork.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
+        <option value="$PROJECT_DIR$/UnitTest/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" />
+        <option value="$PROJECT_DIR$/TestApp/Helper.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
+        <option value="$PROJECT_DIR$/TestApp/Program.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
       </list>
     </option>
@@ -174,82 +69,13 @@
       </set>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1997" />
-    <option name="y" value="28" />
-    <option name="width" value="1400" />
-    <option name="height" value="996" />
-  </component>
   <component name="ProjectId" id="1SYAhk2JcrKuCU4wi7EaDqaIyAR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="App.xaml" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Avalonia.NETCoreApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MainWindow.xaml" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2.2" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NetChat" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NCSharedlib" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2.2" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Packages" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/NCSharedlib/NCSharedlib.csproj" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -301,9 +127,28 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestApp" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/TestApp/bin/Debug/netcoreapp2.2/TestApp.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestApp/bin/Debug/netcoreapp2.2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TestApp/TestApp.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.2" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.Avalonia.NETCoreApp" />
+        <item itemvalue=".NET Project.TestApp" />
       </list>
     </recent_temporary>
   </component>
@@ -324,6 +169,15 @@
       <workItem from="1571757141759" duration="1399000" />
       <workItem from="1571759568989" duration="132000" />
       <workItem from="1571759916082" duration="7167000" />
+      <workItem from="1572357103911" duration="541000" />
+      <workItem from="1572357661232" duration="84000" />
+      <workItem from="1572357761987" duration="16095000" />
+      <workItem from="1572947370624" duration="2074000" />
+      <workItem from="1573217734176" duration="11402000" />
+      <workItem from="1573286636880" duration="685000" />
+      <workItem from="1573287744284" duration="10136000" />
+      <workItem from="1573542487789" duration="235000" />
+      <workItem from="1573543830592" duration="9968000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -346,50 +200,71 @@
       <option name="project" value="LOCAL" />
       <updated>1571768581346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initial commit new PC">
+      <created>1572357158660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572357158660</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finished Prototype on localmashine">
+      <created>1572370163174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572370163174</updated>
+    </task>
+    <task id="LOCAL-00006" summary="finishing up P1 - TESTING">
+      <created>1572384342843</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572384342843</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Started testing on P1">
+      <created>1573218903009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573218903009</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Reworked Networking Manager">
+      <created>1573294961744</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573294961745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commited test app">
+      <created>1573295195926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573295195926</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finished testing Console app dor P-1">
+      <created>1573544173652</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573544173652</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finished Dispatcher">
+      <created>1573548807731</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573548807732</updated>
+    </task>
+    <task id="LOCAL-00012" summary="finishes recieving first harfcoded message">
+      <created>1573551677746</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573551677746</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9648000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1920" y="28" width="1920" height="996" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2593583" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329849" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329849" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.329849" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.329849" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.329849" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.329849" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.329849" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5005348" side_tool="true" weight="0.329849" />
-      <window_info anchor="bottom" id="Build" order="15" sideWeight="0.49946523" weight="0.329849" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -402,20 +277,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -441,7 +303,16 @@
     <MESSAGE value="Created new Branch for the First Prototype" />
     <MESSAGE value="Created Avalonia UI proj" />
     <MESSAGE value="Started development on P1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started development on P1" />
+    <MESSAGE value="initial commit new PC" />
+    <MESSAGE value="finished Prototype on localmashine" />
+    <MESSAGE value="finishing up P1 - TESTING" />
+    <MESSAGE value="Started testing on P1" />
+    <MESSAGE value="Reworked Networking Manager" />
+    <MESSAGE value="commited test app" />
+    <MESSAGE value="finished testing Console app dor P-1" />
+    <MESSAGE value="finished Dispatcher" />
+    <MESSAGE value="finishes recieving first harfcoded message" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishes recieving first harfcoded message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -450,150 +321,33 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NCSharedlib/Chat.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" initialLine="39">
+            <startOffsets>
+              <option value="1123" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NCSharedlib/Chat.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" initialLine="41">
+            <startOffsets>
+              <option value="1198" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1265" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <marker date="1571758772752" expanded="false" signature="6:69" ph="..." />
-            <marker date="1571758772752" expanded="true" signature="91:807" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="131:805" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="192:439" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="361:429" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="482:799" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="666:758" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/NetworkManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <marker date="1571758672013" expanded="false" signature="6:100" ph="..." />
-            <marker date="1571758672013" expanded="true" signature="123:1442" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="167:1430" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="248:975" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="414:924" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="468:772" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="812:910" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="1061:1422" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="1194:1372" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <marker date="1571758772752" expanded="false" signature="6:47" ph="..." />
-            <marker date="1571758772752" expanded="true" signature="69:2069" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="93:2067" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="245:379" ph="/* Think the devices throught, adding a new chat for every device doesnt make sense. ... */" />
-            <marker date="1571758772752" expanded="true" signature="420:539" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="579:628" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="686:734" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="793:875" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="913:2061" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="999:1158" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="1059:1144" ph="{...}" />
-            <marker date="1571758772752" expanded="true" signature="1256:2051" ph="/* List&lt;Message&gt; unsynched = new List&lt;Message&gt;(); ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NCSharedlib/Message.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <marker date="1571758672013" expanded="true" signature="36:692" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="63:690" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="325:446" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="483:541" ph="{...}" />
-            <marker date="1571758672013" expanded="true" signature="583:684" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <marker date="1571763331244" expanded="true" signature="6:43" ph="..." />
-            <marker date="1571763331244" expanded="true" signature="74:240" ph="{...}" />
-            <marker date="1571763331244" expanded="true" signature="111:238" ph="{...}" />
-            <marker date="1571763331244" expanded="true" signature="159:222" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <marker date="1571768174091" expanded="true" signature="6:80" ph="..." />
-            <marker date="1571768174091" expanded="true" signature="111:942" ph="{...}" />
-            <marker date="1571768174091" expanded="true" signature="131:940" ph="{...}" />
-            <marker date="1571768174091" expanded="true" signature="146:354" ph="/* Initialization code. Don't use any Avalonia, third-party APIs or any ... */" />
-            <marker date="1571768174091" expanded="true" signature="698:807" ph="/* Your application's entry point. Here you can initialize your MVVM framework, DI ... */" />
-            <marker date="1571768174091" expanded="true" signature="875:934" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <marker date="1571768511806" expanded="true" signature="6:165" ph="..." />
-            <marker date="1571768511806" expanded="true" signature="196:1500" ph="{...}" />
-            <marker date="1571768511806" expanded="true" signature="235:1498" ph="{...}" />
-            <marker date="1571768511806" expanded="true" signature="269:324" ph="{...}" />
-            <marker date="1571768511806" expanded="true" signature="368:1039" ph="{...}" />
-            <marker date="1571768511806" expanded="true" signature="831:939" ph="/* Button b = new Button(); ... */" />
-            <marker date="1571768511806" expanded="true" signature="1096:1492" ph="{...}" />
-            <marker date="1571768511806" expanded="true" signature="1242:1482" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
