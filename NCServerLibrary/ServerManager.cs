@@ -83,11 +83,33 @@ namespace NCServerLibrary
                 return "172.0.0.1";
             }
         }
-
-        public static string[] GetUser(string username)
+        public static string GetUser(string email)
         {
             string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
-            string query = "SELECT d.ipAddress, u.mail from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username";
+            string query = "SELECT username FROM usr WHERE mail = @email;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    var r = com.ExecuteReader();
+                    while (r.Read())
+                    {
+                        var x = r.GetFieldValue<string>(0);
+
+                        return x;
+                    }
+                }
+                return "User";
+            }
+        }
+
+        public static string GetEmail(string username)
+        {
+            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+            string query = "SELECT mail FROM usr WHERE username = @username;";
 
             using (var con = new MySqlConnection(connectionString))
             {
@@ -101,15 +123,11 @@ namespace NCServerLibrary
                     while (r.Read())
                     {
                         var x = r.GetFieldValue<string>(0);
-                        var y = r.GetFieldValue<string>(1);
-                        string[] sa = new string[2];
-                        sa[0] = x;
-                        sa[1] = y;
 
-                        return sa;
+                        return x;
                     }
                 }
-                return null;
+                return "Mail";
             }
         }
 
