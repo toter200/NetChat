@@ -37,9 +37,10 @@ namespace NCServerLibrary
             }
         }
         */
+        static string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+
         public static bool GetStatus(string email)
         {
-            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
             string query = "SELECT * FROM usr WHERE mail = @email;";
 
             using (var con = new MySqlConnection(connectionString))
@@ -63,8 +64,7 @@ namespace NCServerLibrary
 
         public static string GetIp(string email)
         {
-            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
-            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.mail = @email;"; 
+            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.mail = @email;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
@@ -85,7 +85,6 @@ namespace NCServerLibrary
         }
         public static string GetUser(string email)
         {
-            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
             string query = "SELECT username FROM usr WHERE mail = @email;";
             using (var con = new MySqlConnection(connectionString))
             {
@@ -108,7 +107,6 @@ namespace NCServerLibrary
 
         public static string GetEmail(string username)
         {
-            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
             string query = "SELECT mail FROM usr WHERE username = @username;";
 
             using (var con = new MySqlConnection(connectionString))
@@ -128,6 +126,34 @@ namespace NCServerLibrary
                     }
                 }
                 return "Mail";
+            }
+        }
+
+        public static void CreateUser(string ipad, string username, string email)
+        {
+            string query = "INSERT INTO usr (mail, username, status) VALUES (@mail, @username, 1);";
+            string query2 = "INSERT INTO dev (userID, ipAddress) VALUES ((SELECT id FROM usr WHERE mail=@mail), @ip);";
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
+                var ip = new MySqlParameter("@ip", MySqlDbType.VarChar) { Value = ipad };
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(usr);
+                    com.Parameters.Add(mail);
+                    int i = com.ExecuteNonQuery();
+                }
+
+                using (var com = new MySqlCommand(query2, con))
+                {
+                    com.Parameters.Add(ip);
+                    com.Parameters.Add(mail);
+                    int i = com.ExecuteNonQuery();
+                }
             }
         }
 
