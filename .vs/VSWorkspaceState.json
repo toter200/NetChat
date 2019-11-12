@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NCSharedlib",
+    "\\TestApp"
   ],
+  "SelectedNode": "\\TestApp",
   "PreviewInSolutionExplorer": false
 }

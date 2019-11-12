@@ -11,11 +11,11 @@ namespace NCServerLibrary
 {
     class ServerManager
     {
-        public static bool GetStatus(string username, string email)
+        /*
+        public static string GetIp(string email)
         {
             string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
-            string query = "SELECT * FROM usr WHERE username = @username OR mail = @email";
-
+            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username OR u.mail = @email;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
@@ -28,7 +28,31 @@ namespace NCServerLibrary
                     var r = com.ExecuteReader();
                     while (r.Read())
                     {
-                        var x = r.GetFieldValue<int>(3);
+                        var x = r.GetFieldValue<string>(0);
+
+                        return x;
+                    }
+                }
+                return "172.0.0.1";
+            }
+        }
+        */
+        public static bool GetStatus(string email)
+        {
+            string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
+            string query = "SELECT * FROM usr WHERE mail = @email;";
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    var r = com.ExecuteReader();
+                    while (r.Read())
+                    {
+                        var x = r.GetFieldValue<int>(0);
 
                         return x == 1;
                     }
@@ -37,18 +61,16 @@ namespace NCServerLibrary
             }
         }
 
-        public static string GetIp(string username, string email)
+        public static string GetIp(string email)
         {
             string connectionString = "Server=172.0.0.1;Database=NCDB;Uid=root;Pwd=;";
-            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.username = @username OR u.mail = @email"; 
+            string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.mail = @email;"; 
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
-                var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
                 var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
                 using (var com = new MySqlCommand(query, con))
                 {
-                    com.Parameters.Add(usr);
                     com.Parameters.Add(mail);
                     var r = com.ExecuteReader();
                     while (r.Read())
