@@ -10,6 +10,8 @@ using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using NCSharedlib;
+using System.Threading;
+using Avalonia.Threading;
 
 namespace Avalonia.NETCoreApp
 {
@@ -43,23 +45,22 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-            //Networkingmanager initialization
-            netManager = new NetworkingManager(new Clientmanager(currentChat));
-            //Starting listener on the predifined Port and the current user IP
-            netManager.StartTcpListenerThread(IPAddress.Parse("192.168.43.228"), User.port);
-            //Saving the StackPnael control in a variable
-            chatWindow = this.FindControl<StackPanel>("chatWindow");
             
             
-            us1 = new User("random mail", 1, IPAddress.Parse("0.0.0.0"));
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.228"));
+            us1 = new User("random mail", 1, IPAddress.Parse("192.168.137.238"));
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.137.252"));
             Chat ch = new Chat(localUser, us1);
             Message msg1 = new Message("first message", 0);
             Message msg2 = new Message("seccond message", 1);
             //localUser.SendMessage(msg1, ch);
-            //us1.SendMessage(msg2, ch);
+            Dispatcher.UIThread.InvokeAsync(() => ShowChat(chatWindow, ch));
             
-            ShowChat(chatWindow, ch);
+            //Networkingmanager initialization
+            netManager = new NetworkingManager(new Clientmanager(currentChat));
+            //Starting listener on the predifined Port and the current user IP
+            netManager.StartTcpListenerThread(IPAddress.Parse("192.168.137.252"), User.port);
+            //Saving the StackPnael control in a variable
+            chatWindow = this.FindControl<StackPanel>("chatWindow");
         }
 
         private void ShowChat(StackPanel window, Chat chat)
@@ -68,6 +69,7 @@ namespace Avalonia.NETCoreApp
             foreach (Message msg in chat.msgList)
             {
                 TextBlock tb = new TextBlock();
+                
                 if (msg.UserId == localUser.Id)
                 {
                     tb.HorizontalAlignment = HorizontalAlignment.Right;

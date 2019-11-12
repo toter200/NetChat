@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,12 +55,12 @@
         <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
         <option value="$PROJECT_DIR$/UnitTest/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" />
         <option value="$PROJECT_DIR$/TestApp/Helper.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
         <option value="$PROJECT_DIR$/TestApp/Program.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.TestApp">
+  <component name="RunManager" selected=".NET Project.Avalonia.NETCoreApp">
     <configuration name="Avalonia.NETCoreApp" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Avalonia.NETCoreApp/bin/Debug/netcoreapp2.2/Avalonia.NETCoreApp.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -148,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Project.TestApp" />
         <item itemvalue=".NET Project.Avalonia.NETCoreApp" />
+        <item itemvalue=".NET Project.TestApp" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +179,7 @@
       <workItem from="1573286636880" duration="685000" />
       <workItem from="1573287744284" duration="10136000" />
       <workItem from="1573542487789" duration="235000" />
-      <workItem from="1573543830592" duration="240000" />
+      <workItem from="1573543830592" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573295195926</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="finished testing Console app dor P-1">
+      <created>1573544173652</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573544173652</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +297,8 @@
     <MESSAGE value="Started testing on P1" />
     <MESSAGE value="Reworked Networking Manager" />
     <MESSAGE value="commited test app" />
-    <option name="LAST_COMMIT_MESSAGE" value="commited test app" />
+    <MESSAGE value="finished testing Console app dor P-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished testing Console app dor P-1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
