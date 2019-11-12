@@ -4,6 +4,7 @@
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,22 +21,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/UnitTest/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestApp/Helper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -56,8 +56,8 @@
         <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" />
         <option value="$PROJECT_DIR$/TestApp/Helper.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
         <option value="$PROJECT_DIR$/TestApp/Program.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
       </list>
     </option>
@@ -346,6 +346,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs</url>
+          <line>58</line>
+          <properties documentPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" initialLine="58">
+            <startOffsets>
+              <option value="1568" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1598" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

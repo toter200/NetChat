@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 
@@ -33,50 +35,6 @@ namespace NCSharedlib
                     }
                 });
             thread.Start();
-            /*tcpListener = new TcpListener(ip, port);
-            tcpListener.Start();
-            tcpListener.AcceptSocket();
-            while (true)
-            {
-                var client = tcpListener.AcceptSocket();
-                
-                var tcpListenerThread = new Thread(() =>
-                {
-                    byte[] data = new byte[1024];
-                    int size = client.Receive(data);
-                    for (int i = 0; i < size; i++)
-                    {
-                        reciever.MsgRecieved(new Message(Convert.ToChar(data[i]).ToString(), 1));
-                    }
-                });
-                client.Close();
-                tcpListenerThread.Start();
-            }
-            
-            /*var tcpListenerThread = new Thread(() =>
-            {
-                while (true)
-                    try
-                    {
-                        var bytes = new byte[1024];
-                        var currentConnection = tcpListener.AcceptTcpClient();
-                        tcpListener.AcceptSocket();
-                        var stream = currentConnection.GetStream();
-                        stream.Read(bytes, 0, bytes.Length);
-                        if (new byte[1024] != bytes)
-                        {
-                            Message msg = new Message(Encoding.UTF8.GetString(bytes), 1);
-                            reciever.MsgRecieved(msg);
-                        }
-                        
-                    }
-                    catch
-                    {
-                        throw;
-                    }
-            });
-            tcpListenerThread.Start();*/
-            
         }
         
         public static void SendMessage(string text, IPAddress ip, int port)
@@ -89,20 +47,25 @@ namespace NCSharedlib
             tcpClient.Client.Send(Encoding.UTF8.GetBytes(text));
             tcpClient.Client.Close();
             tcpClient.Close();
-            //tcpClient.Client.Send(Encoding.UTF8.GetBytes(text));
-            /*var tcpSendingThread = new Thread(() =>
-            {
-                var tcpClient = new TcpClient(remote);
-                tcpClient.Connect(remote);
-                tcpClient.Client.Send(
-                    Encoding.UTF8.GetBytes(text)
-                );
-            });
-            tcpSendingThread.Start();*/
         }
 
-
+        public static IPAddress GetLocalIPAddress(NetworkInterfaceType type)
+        {
+            
+            foreach (NetworkInterface interf in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (interf.NetworkInterfaceType == type && interf.OperationalStatus == OperationalStatus.Up)
+                {
+                    foreach (UnicastIPAddressInformation ip in interf.GetIPProperties().UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                        {
+                            return ip.Address;
+                        }
+                    }
+                }
+            }
+            return IPAddress.Loopback;
+        }
     }
-    
-    
 }

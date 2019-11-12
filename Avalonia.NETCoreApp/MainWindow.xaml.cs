@@ -13,6 +13,16 @@ using NCSharedlib;
 using System.Threading;
 using Avalonia.Threading;
 
+
+/*
+ * TODO:
+ * Automatically get local IPAddress;
+ * Create a homepage with multiple chats;
+ * Figure out how to change do different chats;
+ * Implement the locally saved data into the Prototype;
+ * Implement Encryption into the Prototype;
+ */
+
 namespace Avalonia.NETCoreApp
 {
     public class MainWindow : Window
