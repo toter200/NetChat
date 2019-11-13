@@ -19,21 +19,30 @@ namespace NCSharedlib
         /// Constantly changin ip address 
         /// </summary>
         public IPAddress ip;
+        
+        /// <summary>
+        /// fixed port for communication
+        /// </summary>
         public static int port = 48000;
+        
+        /// <summary>
+        /// all hats known to User
+        /// </summary>
         public List<Chat> Chats;
 
+        
+        /// <summary>
+        /// Static id counter *possibly useless
+        /// </summary>
         private static int IdCounter;
         
-
-        //Think the devices throught, adding a new chat for every device doesnt make sense.
-        //Every device will have multiple chats...
-        /*public User(string mail, int id)
-        {
-            this.mail = mail;
-            this.Id = id;
-            this.Chats = new List<Chat>();
-        }*/
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mail">Users mail address</param>
+        /// <param name="id">Users id</param>
+        /// <param name="ip">Users ip address</param>
         public User(string mail,int id, IPAddress ip)
         {
             this.mail = mail;
@@ -42,6 +51,11 @@ namespace NCSharedlib
         }
         
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mail">Users mail address</param>
+        /// <param name="ip"> Users ip address</param>
         public User(string mail, IPAddress ip)
         {
             this.mail = mail;
@@ -50,28 +64,55 @@ namespace NCSharedlib
             this.ip = ip;
         }
 
+        
+        /*
+         * TODO:
+         * Change NewChat() to recieve a User
+         * and automaticlly create a new chat object
+         */
+        /// <summary>
+        /// Create a new Chat between Local user and remote user
+        /// </summary>
+        /// <param name="chat"></param>
         public void NewChat(Chat chat)
         {
             Chats.Add(chat);
         }
 
+        
+        /// <summary>
+        /// Send a Messache thorught to a exsting chat
+        /// </summary>
+        /// <param name="text">Text of message</param>
+        /// <param name="chat">Chat to send to</param>
         public void SendMessage(Message text, Chat chat)
         {
             chat.Add(text);
         }
         
-        public void Sync(Chat chat1, Message msg)
+        /// <summary>
+        /// add a older message to a chat and sort it by time
+        /// </summary>
+        /// <param name="chat">chat to add the message</param>
+        /// <param name="msg"> Older message from another device</param>
+        public void Sync(Chat chat, Message msg)
         {
-            chat1.Add(msg);
-            chat1.msgList.Sort();
+            chat.Add(msg);
+            chat.msgList.Sort();
         }
+        
+        /*
+         * TODO:
+         * Destinguisch between recieving Sync messages and sending,
+         * and get both functions to work
+         */
         public void Sync(Message msg)
         {
-            var user = msg.UserId;
+            var user = msg.MessageOwner;
 
             foreach (var chat in Chats)
             {
-                if (chat.Reciever.Id == user)
+                if (chat.Reciever == user)
                 {
                     this.SendMessage(msg, chat);
                 }

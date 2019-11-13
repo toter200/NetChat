@@ -8,14 +8,29 @@ using System.Threading;
 
 namespace NCSharedlib
 {
+    /// <summary>
+    /// Manager fall all Network related things
+    /// </summary>
     public class NetworkingManager
     {
-
+        /// <summary>
+        /// Interface for recieving new messages
+        /// </summary>
         private IClientNetwork reciever;
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="msgReciever">Class with implemented reciever interface</param>
         public NetworkingManager(IClientNetwork msgReciever)
         {
             reciever = msgReciever;
         }
+        /// <summary>
+        /// Thread for listening to a port in the local ip address
+        /// </summary>
+        /// <param name="ip">IP address to listen to</param>
+        /// <param name="port">Port to listen to</param>
         public void StartTcpListenerThread(IPAddress ip, int port)
         { 
             TcpListener listener = new TcpListener(ip, port);
@@ -37,6 +52,12 @@ namespace NCSharedlib
             thread.Start();
         }
         
+        /// <summary>
+        /// Send message to a remote address by tcp
+        /// </summary>
+        /// <param name="text">string to send</param>
+        /// <param name="ip">remote ip address</param>
+        /// <param name="port">remote port</param>
         public static void SendMessage(string text, IPAddress ip, int port)
         {
             
@@ -49,7 +70,12 @@ namespace NCSharedlib
             tcpClient.Close();
         }
 
-        public static IPAddress GetLocalIPAddress(NetworkInterfaceType type)
+        /// <summary>
+        /// Get the current local ip address
+        /// </summary>
+        /// <param name="type">interface type </param>
+        /// <returns>return the IPaddress as a IPAddress object</returns>
+        public static IPAddress GetLocalIpAddress(NetworkInterfaceType type)
         {
             
             foreach (NetworkInterface interf in NetworkInterface.GetAllNetworkInterfaces())
