@@ -58,9 +58,9 @@ namespace NCServerLibrary
 
             Console.WriteLine();
             ServerManager.AlterStatusAuto(mail1);
-            Console.WriteLine($"Status of {user1}: " + ServerManager.GetStatus(mail1));
+            Console.WriteLine($"Auto Status of {user1}: " + ServerManager.GetStatus(mail1));
             ServerManager.AlterStatusAuto(mail1);
-            Console.WriteLine($"Status of {user1}: " + ServerManager.GetStatus(mail1));
+            Console.WriteLine($"Auto Status of {user1}: " + ServerManager.GetStatus(mail1));
             ServerManager.AlterStatusAuto(mail2);
             Console.WriteLine($"Auto Status of {user2}: " + ServerManager.GetStatus(mail2));
             ServerManager.AlterStatusAuto(mail2);
