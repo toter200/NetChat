@@ -1,11 +1,8 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace NCServerLibrary
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

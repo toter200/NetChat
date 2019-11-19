@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\NCServerLibrary",
     "\\NCSharedlib",
     "\\TestApp"
   ],
-  "SelectedNode": "\\TestApp",
+  "SelectedNode": "\\NCServerLibrary\\ServerManager.cs",
   "PreviewInSolutionExplorer": false
 }

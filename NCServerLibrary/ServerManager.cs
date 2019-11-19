@@ -9,20 +9,24 @@ using MySql.Data.MySqlClient;
 
 namespace NCServerLibrary
 {
-    class ServerManager
+    public class ServerManager
     {
-        static string connectionString = "Server=172.0.0.1;Database=ncdb;Uid=root;Pwd=;";
+        static string connectionString = "Server=localhost;Database=ncdb;Uid=root;Pwd=;";
 
         public static void CreateDatabase()
         {
-            string connectionString = "Server=172.0.0.1;Database=;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost; Database=; Uid=root; Pwd=;";
             string query = "CREATE DATABASE ncdb; use ncdb; CREATE TABLE usr (id INT(6) AUTO_INCREMENT PRIMARY KEY, mail VARCHAR(60) NOT NULL, username VARCHAR(60) NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1); CREATE TABLE dev (devID INT(6) AUTO_INCREMENT PRIMARY KEY, userID INT(6) NOT NULL REFERENCES usr(id), ipAddress VARCHAR(20) NOT NULL); SHOW COLUMNS FROM usr; SHOW COLUMNS FROM dev;";
             using (var con = new MySqlConnection(connectionString))
             {
+                Console.WriteLine("Open Database Connection... ");
                 con.Open();
+                Console.WriteLine("Connected Database");
                 using (var com = new MySqlCommand(query, con))
                 {
+                    Console.WriteLine("Creating Database");
                     int i = com.ExecuteNonQuery();
+                    Console.WriteLine("Database Created");
                 }
 
             }
@@ -36,6 +40,7 @@ namespace NCServerLibrary
                 using (var com = new MySqlCommand(query, con))
                 {
                     int i = com.ExecuteNonQuery();
+                    Console.WriteLine("Deleted Database");
                 }
 
             }
@@ -54,8 +59,8 @@ namespace NCServerLibrary
                     var r = com.ExecuteReader();
                     while (r.Read())
                     {
-                        var x = r.GetFieldValue<int>(0);
-                        return x == 1;
+                        var x = r.GetFieldValue<bool>(0);
+                        return x;
                     }
                 }
                 return false;
@@ -126,7 +131,7 @@ namespace NCServerLibrary
                 return "Mail";
             }
         }
-        public static void CreateUser(string ipad, string username, string email)
+        public static void CreateUser(string ipaddress, string username, string email)
         {
             string query = "INSERT INTO usr (mail, username, status) VALUES (@mail, @username, 1);";
             string query2 = "INSERT INTO dev (userID, ipAddress) VALUES ((SELECT id FROM usr WHERE mail=@mail), @ip);";
@@ -135,7 +140,7 @@ namespace NCServerLibrary
             {
                 con.Open();
                 var usr = new MySqlParameter("@username", MySqlDbType.VarChar) { Value = username };
-                var ip = new MySqlParameter("@ip", MySqlDbType.VarChar) { Value = ipad };
+                var ip = new MySqlParameter("@ip", MySqlDbType.VarChar) { Value = ipaddress };
                 var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
 
                 using (var com = new MySqlCommand(query, con))
@@ -150,6 +155,20 @@ namespace NCServerLibrary
                     com.Parameters.Add(ip);
                     com.Parameters.Add(mail);
                     int i = com.ExecuteNonQuery();
+                }
+            }
+        }
+        public static void DeleteUser(string email)
+        {
+            string query = "DELETE FROM usr WHERE mail = @email;";
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
+                using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.ExecuteNonQuery();
                 }
             }
         }
