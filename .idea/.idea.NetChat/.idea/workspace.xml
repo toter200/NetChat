@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,9 +58,9 @@
         <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
-        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +182,7 @@
       <workItem from="1573543830592" duration="9968000" />
       <workItem from="1573656994855" duration="1648000" />
       <workItem from="1573734513616" duration="2352000" />
-      <workItem from="1574153272339" duration="5678000" />
+      <workItem from="1574153272339" duration="9345000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -280,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573658467332</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Started working on Dekstop UI and Controls">
+      <created>1574159373589</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1574159373589</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +332,8 @@
     <MESSAGE value="finished Dispatcher" />
     <MESSAGE value="finishes recieving first harfcoded message" />
     <MESSAGE value="added Documantation to NCShared library and todos" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Documantation to NCShared library and todos" />
+    <MESSAGE value="Started working on Dekstop UI and Controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started working on Dekstop UI and Controls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

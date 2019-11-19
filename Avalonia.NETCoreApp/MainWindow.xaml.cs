@@ -43,20 +43,23 @@ namespace Avalonia.NETCoreApp
         /// </summary>
         private NetworkingManager netManager;
 
+        public ObservableCollection<Tuple<Chat, Chat>> ChatCollection;
+
         public User us1;
         public Chat chat;
         public MainWindow()
         {
             currentChat = new ObservableCollection<Message>();
+            ChatCollection = new ObservableCollection<Tuple<Chat, Chat>>();
             InitializeComponent();
             currentChat.CollectionChanged += ChatChanged;
-            //currentChat.CollectionChanged += ChatChanged;
         }
 
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-            
+            var chatlist = this.FindControl<ListBox>("ChatList");
+            chatlist
             /*
             us1 = new User("random mail", 1, IPAddress.Parse("192.168.43.228"));
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.172"));
@@ -132,6 +135,21 @@ namespace Avalonia.NETCoreApp
                     }
                 }
             );
+        }
+
+        /*
+         * TODO:
+         * finish observable colleciton
+         */
+        private void ChatListChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            Dispatcher.UIThread.InvokeAsync(() =>
+            {
+                foreach (var touple in e.NewItems)    
+                {
+                    
+                }
+            });
         }
         
     }
