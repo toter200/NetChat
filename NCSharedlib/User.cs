@@ -16,9 +16,14 @@ namespace NCSharedlib
         /// </summary>
         public int Id { get; private set; }
         /// <summary>
-        /// Constantly changin ip address 
+        /// Constantly changing ip address 
         /// </summary>
         public IPAddress ip;
+
+        /// <summary>
+        /// Username for a User
+        /// </summary>
+        public string Name { get; private set; }
         
         /// <summary>
         /// fixed port for communication
@@ -43,8 +48,9 @@ namespace NCSharedlib
         /// <param name="mail">Users mail address</param>
         /// <param name="id">Users id</param>
         /// <param name="ip">Users ip address</param>
-        public User(string mail,int id, IPAddress ip)
+        public User(string username, string mail,int id, IPAddress ip)
         {
+            this.Name = username;
             this.mail = mail;
             this.Id = id;
             this.ip = ip;
@@ -65,18 +71,14 @@ namespace NCSharedlib
         }
 
         
-        /*
-         * TODO:
-         * Change NewChat() to recieve a User
-         * and automaticlly create a new chat object
-         */
         /// <summary>
         /// Create a new Chat between Local user and remote user
         /// </summary>
         /// <param name="chat"></param>
-        public void NewChat(Chat chat)
+        public void NewChat(User localUser, User remoteUser)
         {
-            Chats.Add(chat);
+            Chat newChat = new Chat(localUser, remoteUser);
+            Chats.Add(newChat);
         }
 
         

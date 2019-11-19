@@ -40,7 +40,11 @@ namespace NCSharedlib
             this.MessageOwner = user;
             Timestamp = DateTime.Now;
         }
-        
+
+        /*
+         * TODO:
+         * Correct message to recieve a assign a usr upon creation
+         */
         /// <summary>
         /// Set the synchronized flag to True
         /// </summary>

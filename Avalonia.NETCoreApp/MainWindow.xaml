@@ -4,8 +4,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
         x:Class="Avalonia.NETCoreApp.MainWindow"
-        Title="NetChat - P1">
+        Title="NetChat - P1" Height="800" Width="1024">
         
+    <DataTemplate x:Key="ChatTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Button >
+                <Button.Content>
+                    <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button>
+                <Button.Content>
+                    <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </DataTemplate>
+    
+    <!--
         <Grid ColumnDefinitions="100*, 50" RowDefinitions="50*, 50">
             <StackPanel Name="chatWindow" Grid.Row="0" Grid.Column="0" Orientation="Vertical"  Margin="5">
                 
@@ -15,4 +31,36 @@
                 Send
             </Button>
         </Grid>
+     -->
+    
+   <DockPanel LastChildFill="True" Background="Gray">
+       <Border CornerRadius="10" Background="Black">
+           <DockPanel Name="Settignsbar" LastChildFill="False" Width="60"
+                      Background="Black" Margin="5" >
+               <Image DockPanel.Dock="Top"></Image>
+               <Button DockPanel.Dock="Top" Margin="10" Background="black">USR</Button>
+               <Button DockPanel.Dock="Top" Margin="10" Background="black">Status</Button>
+               <Button DockPanel.Dock="Bottom" Margin="10" Background="black">Set</Button>
+           </DockPanel>
+       </Border>
+       
+       
+       <Border CornerRadius="10" Background="Black">
+           <!--<StackPanel Name="KnownChatPanel" DockPanel.Dock="Left" Background="black" Width="150" Margin="5">
+               <Button Background="Gray" Margin="10">New Chat</Button>
+               </StackPanel>
+           -->
+           <ListBox Width="150"
+                    Resources="{Binding Source={StaticResource ChatCollection}"></ListBox>
+       </Border>      
+       
+       <Border>
+           <StackPanel Orientation="Horizontal">
+               <StackPanel>
+                   Sta
+               </StackPanel>
+           </StackPanel>
+       </Border>
+        <Button DockPanel.Dock="Right">Chatarea</Button>
+    </DockPanel>
 </Window>

@@ -16,7 +16,6 @@ using Avalonia.Threading;
 
 /*
  * TODO:
- * Automatically get local IPAddress;
  * Create a homepage with multiple chats;
  * Figure out how to change do different chats;
  * Implement the locally saved data into the Prototype;
@@ -58,7 +57,7 @@ namespace Avalonia.NETCoreApp
         {
             AvaloniaXamlLoader.Load(this);
             
-            
+            /*
             us1 = new User("random mail", 1, IPAddress.Parse("192.168.43.228"));
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.172"));
             chat = new Chat(localUser, us1);
@@ -72,7 +71,7 @@ namespace Avalonia.NETCoreApp
             //Starting listener on the predifined Port and the current user IP
             netManager.StartTcpListenerThread(IPAddress.Parse("192.168.43.172"), User.port);
             //Saving the StackPnael control in a variable
-            chatWindow = this.FindControl<StackPanel>("chatWindow");
+            chatWindow = this.FindControl<StackPanel>("chatWindow");*/
         }
 
         private void ShowChat(StackPanel window, Chat chat)
@@ -81,7 +80,7 @@ namespace Avalonia.NETCoreApp
             {
                 TextBlock tb = new TextBlock();
                 
-                if (msg.UserId == localUser.Id)
+                if (msg.MessageOwner == localUser)
                 {
                     tb.HorizontalAlignment = HorizontalAlignment.Right;
                 }
@@ -103,7 +102,7 @@ namespace Avalonia.NETCoreApp
             try
             {
                 TextBox tbox = this.FindControl<TextBox>("MessageInput");
-                Message msg = new Message(tbox.Text, localUser.Id);
+                Message msg = new Message(tbox.Text, localUser);
                 currentChat.Add(msg);
                 localUser.SendMessage(msg, chat);
             }
@@ -119,7 +118,7 @@ namespace Avalonia.NETCoreApp
                     foreach (Message msg in e.NewItems)
                     {
                         TextBlock tb = new TextBlock();
-                        if (msg.UserId == localUser.Id)
+                        if (msg.MessageOwner == localUser)
                         {
                             tb.HorizontalAlignment = HorizontalAlignment.Right;
                         }
