@@ -14,7 +14,8 @@
                         <!--TODO:
                             figure out how to bind multiple objects to one template
                         -->
-                        <TextBlock Text="{Binding Path=}"></TextBlock>
+                        <TextBlock Text="{Binding Path=Reciever }"></TextBlock>
+                        
                     </Button.Content>
                 </Button>
                 <Button>
@@ -43,17 +44,24 @@
                <Button Background="Gray" Margin="10">New Chat</Button>
                </StackPanel>
            -->
-           <ListBox Width="150" Name="ChatList"
-                    ItemTemplate="{StaticResource ChatTemplate}"></ListBox>
+           <!--<ListBox Width="150" Name="ChatList"
+                    ItemTemplate="{StaticResource ChatTemplate}"></ListBox> -->
        </Border>      
        
        <Border>
            <StackPanel Orientation="Horizontal">
                <StackPanel>
-                   Sta
+                   
                </StackPanel>
            </StackPanel>
        </Border>
-        <Button DockPanel.Dock="Right">Chatarea</Button>
+               <DockPanel LastChildFill="True">
+                   <DockPanel LastChildFill="True" DockPanel.Dock="Bottom" Height="25">
+                       <Button DockPanel.Dock="Right">Send</Button>
+                       <Button DockPanel.Dock="RIght">File</Button>
+                       <TextBox></TextBox>
+                   </DockPanel>
+                   <ListBox></ListBox>
+               </DockPanel>
     </DockPanel>
 </Window>

@@ -59,7 +59,7 @@ namespace Avalonia.NETCoreApp
         {
             AvaloniaXamlLoader.Load(this);
             var chatlist = this.FindControl<ListBox>("ChatList");
-            chatlist
+            
             /*
             us1 = new User("random mail", 1, IPAddress.Parse("192.168.43.228"));
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.172"));
