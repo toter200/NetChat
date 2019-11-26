@@ -161,8 +161,8 @@ namespace NCServerLibrary
         public static void DeleteUser(string email)
         {
 
-            string query = "DELETE FROM dev WHERE userID = (SELECT id FROM usr WHERE mail = @mail);";
-            string query2 = "DELETE FROM usr WHERE mail = @mail;";
+            string query = "DELETE FROM dev WHERE userID = (SELECT id FROM usr WHERE mail = @email);";
+            string query2 = "DELETE FROM usr WHERE mail = @email;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
