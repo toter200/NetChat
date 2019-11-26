@@ -11,7 +11,26 @@ namespace NCServerLibrary
             string user1 = "meikev3";
             string user2 = "toter200";
 
+            ServerManager.CreateDatabase();
 
+
+            Console.WriteLine();
+            Console.WriteLine("---Creating new Users---");
+            Console.WriteLine();
+            ServerManager.CreateUser("172.0.0.1", user1, mail1);
+            Console.WriteLine($"username of the new User: " + ServerManager.GetUser(mail1));
+            Console.WriteLine($"IP of the new User: " + ServerManager.GetIp(mail1));
+            Console.WriteLine($"Status of the new User: " + ServerManager.GetStatus(mail1));
+            Console.WriteLine($"Email of the new User: " + ServerManager.GetEmail(mail1));
+
+            Console.WriteLine();
+            ServerManager.CreateUser("192.172.0.1", user2, mail2);
+            Console.WriteLine($"username of the new User: " + ServerManager.GetUser(mail2));
+            Console.WriteLine($"IP of the new User: " + ServerManager.GetIp(mail2));
+            Console.WriteLine($"Status of the new User: " + ServerManager.GetStatus(mail2));
+            Console.WriteLine($"Email of the new User: " + ServerManager.GetEmail(mail2));
+
+            Console.WriteLine();
             Console.WriteLine("---Get funktions---");
             Console.WriteLine();
             Console.WriteLine(ServerManager.GetStatus(mail1));
@@ -76,20 +95,13 @@ namespace NCServerLibrary
             ServerManager.AlterUsername("toter200", mail2);
             Console.WriteLine($"Username of {user2}: " + ServerManager.GetUser(mail2));
 
-            Console.WriteLine();
-            Console.WriteLine("---Creating new User---");
-            Console.WriteLine();
-            ServerManager.CreateUser("172.0.0.1", "User2", "user2@mail.at");
-            Console.WriteLine($"username of the new User: " + ServerManager.GetUser("user2@mail.at"));
-            Console.WriteLine($"IP of the new User: " + ServerManager.GetIp("user2@mail.at"));
-            Console.WriteLine($"Status of the new User: " + ServerManager.GetStatus("user2@mail.at"));
-            Console.WriteLine($"Email of the new User: " + ServerManager.GetEmail("user2"));
 
 
             Console.WriteLine();
             Console.WriteLine("---Delete User---");
             Console.WriteLine();
-            ServerManager.DeleteUser("user2@mail.at");
+            ServerManager.DeleteUser(mail1);
+            ServerManager.DeleteUser(mail2);
             Console.WriteLine("User deleted");
         }
     }
