@@ -160,12 +160,19 @@ namespace NCServerLibrary
         }
         public static void DeleteUser(string email)
         {
-            string query = "DELETE FROM usr WHERE mail = @email;";
+
+            string query = "DELETE FROM dev WHERE userID = (SELECT id FROM usr WHERE mail = @mail);";
+            string query2 = "DELETE FROM usr WHERE mail = @mail;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
                 var mail = new MySqlParameter("@email", MySqlDbType.VarChar) { Value = email };
                 using (var com = new MySqlCommand(query, con))
+                {
+                    com.Parameters.Add(mail);
+                    com.ExecuteNonQuery();
+                }
+                using (var com = new MySqlCommand(query2, con))
                 {
                     com.Parameters.Add(mail);
                     com.ExecuteNonQuery();

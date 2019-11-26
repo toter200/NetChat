@@ -103,6 +103,9 @@ namespace NCServerLibrary
             ServerManager.DeleteUser(mail1);
             ServerManager.DeleteUser(mail2);
             Console.WriteLine("User deleted");
+            Console.WriteLine();
+            Console.WriteLine("Deleting Database...");
+            ServerManager.DeleteDatabase();
         }
     }
 }
