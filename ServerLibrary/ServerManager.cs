@@ -15,7 +15,7 @@ namespace ServerLibrary
 
         public static void CreateDatabase()
         {
-            string connectionString = "Server=localhost; Database=; Uid=root; Pwd=;";
+            string connectionString = "Server=localhost; Database=; Uid=root; Pwd=Hs4e9FUMjA;";
             string query = "CREATE DATABASE ncdb; use ncdb; CREATE TABLE usr (id INT(6) AUTO_INCREMENT PRIMARY KEY, mail VARCHAR(60) NOT NULL, username VARCHAR(60) NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1); CREATE TABLE dev (devID INT(6) AUTO_INCREMENT PRIMARY KEY, userID INT(6) NOT NULL REFERENCES usr(id), ipAddress VARCHAR(20) NOT NULL); SHOW COLUMNS FROM usr; SHOW COLUMNS FROM dev;";
             using (var con = new MySqlConnection(connectionString))
             {
