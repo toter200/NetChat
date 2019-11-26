@@ -11,7 +11,7 @@ namespace ServerLibrary
 {
     public class ServerManager
     {
-        static string connectionString = "Server=localhost;Database=ncdb;Uid=root;Pwd=;";
+        static string connectionString = "Server=localhost;Database=ncdb;Uid=root;Pwd=Hs4e9FUMjA;";
 
         public static void CreateDatabase()
         {
