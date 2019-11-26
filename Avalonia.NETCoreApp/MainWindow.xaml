@@ -17,9 +17,6 @@
             <StackPanel Orientation="Horizontal">
                 <Button >
                     <Button.Content>
-                        <!--TODO:
-                            figure out how to bind multiple objects to one template
-                        -->
                         <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
                         
                     </Button.Content>
@@ -67,7 +64,7 @@
                    <ListBox Name="currentChat">
                        <ListBox.DataTemplates >
                             <DataTemplate x:Key="MessageTemplate">
-                                <TextBlock TextAlignment="{Binding Path=alingment, Converter={StaticResource MessageAlignmentConverter}}"
+                                <TextBlock  HorizontalAlignment="{Binding Path=Alignment, Converter={StaticResource MessageAlignmentConverter}}"
                                            Text="{Binding Path=Content}" Background="Red">
                                     
                                 </TextBlock>
