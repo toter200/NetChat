@@ -77,7 +77,6 @@ namespace NCSharedlib
         /// <returns>return the IPaddress as a IPAddress object</returns>
         public static IPAddress GetLocalIpAddress(NetworkInterfaceType type)
         {
-            
             foreach (NetworkInterface interf in NetworkInterface.GetAllNetworkInterfaces())
             {
                 if (interf.NetworkInterfaceType == type && interf.OperationalStatus == OperationalStatus.Up)

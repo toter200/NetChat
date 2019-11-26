@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Net;
+using System.Net.NetworkInformation;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -33,7 +34,7 @@ namespace Avalonia.NETCoreApp
         /// <summary>
         /// Main chat window in current View
         /// </summary>
-        private StackPanel chatWindow;
+        private ListBox chatWindow;
         /// <summary>
         /// Messages in current chat window
         /// </summary>
@@ -43,14 +44,14 @@ namespace Avalonia.NETCoreApp
         /// </summary>
         private NetworkingManager netManager;
 
-        public ObservableCollection<Tuple<Chat, Chat>> ChatCollection;
+        public ObservableCollection<Tuple<Chat, Chat>> knownChatCollection;
 
         public User us1;
         public Chat chat;
         public MainWindow()
         {
-            currentChat = new ObservableCollection<Message>();
-            ChatCollection = new ObservableCollection<Tuple<Chat, Chat>>();
+            currentChat = new ObservableCollection<Message>(); 
+            knownChatCollection= new ObservableCollection<Tuple<Chat, Chat>>();
             InitializeComponent();
             currentChat.CollectionChanged += ChatChanged;
         }
@@ -58,23 +59,25 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-            var chatlist = this.FindControl<ListBox>("ChatList");
             
-            /*
-            us1 = new User("random mail", 1, IPAddress.Parse("192.168.43.228"));
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.43.172"));
-            chat = new Chat(localUser, us1);
-            Message msg1 = new Message("first message", 0);
-            Message msg2 = new Message("seccond message", 1);
             
-            Dispatcher.UIThread.InvokeAsync(() => ShowChat(chatWindow, chat));
-            
-            //Networkingmanager initialization
             netManager = new NetworkingManager(new Clientmanager(currentChat));
-            //Starting listener on the predifined Port and the current user IP
-            netManager.StartTcpListenerThread(IPAddress.Parse("192.168.43.172"), User.port);
-            //Saving the StackPnael control in a variable
-            chatWindow = this.FindControl<StackPanel>("chatWindow");*/
+            
+            netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
+            
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetLocalIpAddress(NetworkInterfaceType.Ethernet));
+            us1 = new User("loopback suer", IPAddress.Loopback);
+            
+            chat = new Chat(localUser, us1);
+            
+            ListBox chatlist = this.FindControl<ListBox>("ChatList");
+            ListBox currentChatList = this.FindControl<ListBox>("currentChat");
+
+            chatlist.Items = knownChatCollection;
+            currentChatList.Items = currentChat;
+            Message msg = new Message(NetworkingManager.GetLocalIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
+            currentChat.Add(msg);
+                      
         }
 
         private void ShowChat(StackPanel window, Chat chat)
@@ -96,17 +99,19 @@ namespace Avalonia.NETCoreApp
             }
         }
 
-        public void NewMessage(Message msg)
+        /*public void NewMessage(Message msg)
         {
             currentChat.Add(msg);
         }
+        */
         private void OnButtonSend(object sender, EventArgs e)
         {
             try
             {
                 TextBox tbox = this.FindControl<TextBox>("MessageInput");
-                Message msg = new Message(tbox.Text, localUser);
+                Message msg = new Message(tbox.Text, localUser, "RIGHT");
                 currentChat.Add(msg);
+                
                 localUser.SendMessage(msg, chat);
             }
             catch
@@ -131,7 +136,7 @@ namespace Avalonia.NETCoreApp
                         }
 
                         tb.Text = msg.Content;
-                        chatWindow.Children.Add(tb);
+                        //chatWindow.Children.Add(tb);
                     }
                 }
             );

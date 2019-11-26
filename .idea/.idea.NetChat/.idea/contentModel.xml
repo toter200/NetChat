@@ -12,6 +12,7 @@
         <e p="Clientmanager.cs" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="MessageAlignmentConverter.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="nuget.config" t="Include" />

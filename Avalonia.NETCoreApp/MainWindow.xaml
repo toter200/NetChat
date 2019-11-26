@@ -2,11 +2,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avalonia.NETCoreApp"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
         x:Class="Avalonia.NETCoreApp.MainWindow"
         Title="NetChat - P1" Height="800" Width="1024">
+    
         
     <Window.Resources>
+    <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter">
+        
+    </local:MessageAlignmentConverter>
+        
         <DataTemplate x:Key="ChatTemplate">
             <StackPanel Orientation="Horizontal">
                 <Button >
@@ -14,7 +20,7 @@
                         <!--TODO:
                             figure out how to bind multiple objects to one template
                         -->
-                        <TextBlock Text="{Binding Path=Reciever }"></TextBlock>
+                        <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
                         
                     </Button.Content>
                 </Button>
@@ -25,6 +31,7 @@
                 </Button>
             </StackPanel>
         </DataTemplate>
+        
     </Window.Resources>
     
    <DockPanel LastChildFill="True" Background="Gray">
@@ -44,24 +51,29 @@
                <Button Background="Gray" Margin="10">New Chat</Button>
                </StackPanel>
            -->
-           <!--<ListBox Width="150" Name="ChatList"
-                    ItemTemplate="{StaticResource ChatTemplate}"></ListBox> -->
-       </Border>      
-       
-       <Border>
-           <StackPanel Orientation="Horizontal">
-               <StackPanel>
-                   
-               </StackPanel>
+           <StackPanel>
+               <Button> New Chat</Button>
+               <ListBox Width="150" Name="ChatList"
+                        ItemTemplate="{StaticResource ChatTemplate}"></ListBox>
+               
            </StackPanel>
-       </Border>
+       </Border>      
                <DockPanel LastChildFill="True">
-                   <DockPanel LastChildFill="True" DockPanel.Dock="Bottom" Height="25">
-                       <Button DockPanel.Dock="Right">Send</Button>
-                       <Button DockPanel.Dock="RIght">File</Button>
-                       <TextBox></TextBox>
+                   <DockPanel LastChildFill="True" DockPanel.Dock="Bottom" Height="50">
+                       <Button DockPanel.Dock="Right" Width="50" Click="OnButtonSend">Send</Button>
+                       <Button DockPanel.Dock="RIght" Width="50">File</Button>
+                       <TextBox  Name="MessageInput"></TextBox>
                    </DockPanel>
-                   <ListBox></ListBox>
+                   <ListBox Name="currentChat">
+                       <ListBox.DataTemplates >
+                            <DataTemplate x:Key="MessageTemplate">
+                                <TextBlock TextAlignment="{Binding Path=alingment, Converter={StaticResource MessageAlignmentConverter}}"
+                                           Text="{Binding Path=Content}" Background="Red">
+                                    
+                                </TextBlock>
+                            </DataTemplate>
+                       </ListBox.DataTemplates>
+                   </ListBox>
                </DockPanel>
     </DockPanel>
 </Window>

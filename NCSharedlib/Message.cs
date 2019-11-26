@@ -27,17 +27,19 @@ namespace NCSharedlib
         /// Flag to check if message is Synchronized between devices or not
         /// </summary>
         public bool Synchronized { get; private set; }
-        
+
+        public string Alignment { get; private set; }
         
         /// <summary>
         /// 
         /// </summary>
         /// <param name="text">Content of Message</param>
         /// <param name="user">Sender of the Message</param>
-        public Message(string text, User user)
+        public Message(string text, User user, string alignemt)
         {
             this.Content = text;
             this.MessageOwner = user;
+            this.Alignment = alignemt.ToUpper();
             Timestamp = DateTime.Now;
         }
 
