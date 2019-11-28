@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Reflection.Emit;
 using Newtonsoft.Json;
@@ -18,6 +19,7 @@ namespace NCSharedlib
             JsonSerializer serializer = new JsonSerializer();
             using (StreamWriter sr = new StreamWriter(@"./data.json"))
             {
+                Console.WriteLine("Written to file");
                 serializer.Serialize(sr, localUser);
             }
         }

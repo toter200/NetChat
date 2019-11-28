@@ -8,15 +8,14 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            User localUser = new User("hajduk.d01@htl-ottakring.ac.at", 0, IPAddress.Parse("192.168.137.252"));
-            User remoteUser = new User("new@mail.com", 1, IPAddress.Parse("192.168.137.238"));
-            Chat localChat = new Chat(localUser, remoteUser);
-            Helper help = new Helper();
-            NetworkingManager netManager = new NetworkingManager(help);
-            netManager.StartTcpListenerThread(IPAddress.Parse("192.168.137.252"), User.port);
-            //localUser.SendMessage(new Message("test", 0), localChat);
-            //localUser.SendMessage(new Message("new MSg", 0), localChat);
-            
+            User localUser = new User("hajduk.d01@htl-ottakring.ac.at",  IPAddress.Parse("192.168.137.252"));
+            User remoteUser = new User("new@mail.com", IPAddress.Parse("192.168.137.238"));
+            localUser.NewChat(localUser, remoteUser);
+            //MemoryManager.WriteToFile(localUser);
+            //User readUser= MemoryManager.ReadFormFile();
+            //Console.WriteLine(readUser);
+            string externalip = new WebClient().DownloadString("http://icanhazip.com");            
+            Console.WriteLine(externalip);            
         }
     }
 }

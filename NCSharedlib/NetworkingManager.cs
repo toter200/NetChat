@@ -75,8 +75,11 @@ namespace NCSharedlib
         /// </summary>
         /// <param name="type">interface type </param>
         /// <returns>return the IPaddress as a IPAddress object</returns>
-        public static IPAddress GetLocalIpAddress(NetworkInterfaceType type)
+        public static IPAddress GetIpAddress(NetworkInterfaceType type)
         {
+            string externalip = new WebClient().DownloadString("http://icanhazip.com");            
+            return IPAddress.Parse(externalip.Trim());
+            /*
             foreach (NetworkInterface interf in NetworkInterface.GetAllNetworkInterfaces())
             {
                 if (interf.NetworkInterfaceType == type && interf.OperationalStatus == OperationalStatus.Up)
@@ -91,6 +94,7 @@ namespace NCSharedlib
                 }
             }
             return IPAddress.Loopback;
+            */
         }
     }
 }

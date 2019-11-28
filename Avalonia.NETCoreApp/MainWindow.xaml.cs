@@ -65,8 +65,8 @@ namespace Avalonia.NETCoreApp
             
             netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
             
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetLocalIpAddress(NetworkInterfaceType.Ethernet));
-            us1 = new User("loopback suer", IPAddress.Loopback);
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet));
+            us1 = new User("loopback suer", IPAddress.Parse());
             
             chat = new Chat(localUser, us1);
             
@@ -75,8 +75,9 @@ namespace Avalonia.NETCoreApp
 
             chatlist.Items = knownChatCollection;
             currentChatList.Items = currentChat;
-            Message msg = new Message(NetworkingManager.GetLocalIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
-            currentChat.Add(msg);
+            Message msg = new Message(NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
+            
+            //localUser.SendMessage(msg, chat);
                       
         }
 

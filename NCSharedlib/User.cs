@@ -54,6 +54,7 @@ namespace NCSharedlib
             this.mail = mail;
             this.Id = id;
             this.ip = ip;
+            this.Chats = new List<Chat>();
         }
         
         
@@ -68,6 +69,7 @@ namespace NCSharedlib
             IdCounter++;
             this.Id = IdCounter;
             this.ip = ip;
+            this.Chats = new List<Chat>();
         }
 
         
