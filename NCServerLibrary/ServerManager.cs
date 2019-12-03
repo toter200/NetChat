@@ -11,13 +11,13 @@ namespace NCServerLibrary
 {
     public class ServerManager
     {
-        static string connectionString = "Server=localhost;Database=ncdb;Uid=NetChat;Pwd=;";
+        static string connectionString = "Server=localhost;Database=ncdbTEST;Uid=NetChat;Pwd=;";
 
         public static void CreateDatabase()
         {
 
             string connectionString = "Server=localhost; Database=; Uid=NetChat; Pwd=;";
-            string query = "CREATE DATABASE ncdb; use ncdb; CREATE TABLE usr (id INT(6) AUTO_INCREMENT PRIMARY KEY, mail VARCHAR(60) NOT NULL, username VARCHAR(60) NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1); CREATE TABLE dev (devID INT(6) AUTO_INCREMENT PRIMARY KEY, userID INT(6) NOT NULL REFERENCES usr(id), ipAddress VARCHAR(20) NOT NULL); SHOW COLUMNS FROM usr; SHOW COLUMNS FROM dev;";
+            string query = " CREATE DATABASE ncdbTEST; use ncdbTEST; CREATE TABLE usr (id INT(6) AUTO_INCREMENT PRIMARY KEY, mail VARCHAR(60) NOT NULL, username VARCHAR(60) NOT NULL); CREATE TABLE dev (devID INT(6) AUTO_INCREMENT PRIMARY KEY, userID INT(6) NOT NULL REFERENCES usr(id), ipAddress VARCHAR(20) NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1); SHOW COLUMNS FROM usr; SHOW COLUMNS FROM dev;";
             using (var con = new MySqlConnection(connectionString))
             {
                 Console.WriteLine("Open Database Connection... ");
@@ -34,7 +34,7 @@ namespace NCServerLibrary
         }
         public static void DeleteDatabase()
         {
-            string query = "drop DATABASE ncdb;";
+            string query = "drop DATABASE ncdbTEST;";
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
@@ -48,7 +48,8 @@ namespace NCServerLibrary
         }
         public static bool GetStatus(string email)
         {
-            string query = "SELECT status FROM usr WHERE mail = @email;";
+            //string query = "SELECT status FROM dev WHERE userID = @email;";
+            string query = "SELECT status FROM dev WHERE userID = (SELECT id FROM usr WHERE id = userID);";
 
             using (var con = new MySqlConnection(connectionString))
             {
@@ -70,6 +71,7 @@ namespace NCServerLibrary
         public static string GetIp(string email)
         {
             string query = "SELECT d.ipAddress from dev d JOIN usr u ON u.id = d.userID WHERE u.mail = @email;";
+
             using (var con = new MySqlConnection(connectionString))
             {
                 con.Open();
@@ -177,6 +179,24 @@ namespace NCServerLibrary
                 {
                     com.Parameters.Add(mail);
                     com.ExecuteNonQuery();
+                }
+            }
+        }
+        public static void CreateNewDevice(string ipaddress, string email)
+        {
+            string query2 = "INSERT INTO dev (userID, ipAddress) VALUES ((SELECT id FROM usr WHERE mail=@mail), @ip);";
+
+            using (var con = new MySqlConnection(connectionString))
+            {
+                con.Open();
+                var ip = new MySqlParameter("@ip", MySqlDbType.VarChar) { Value = ipaddress };
+                var mail = new MySqlParameter("@mail", MySqlDbType.VarChar) { Value = email };
+
+                using (var com = new MySqlCommand(query2, con))
+                {
+                    com.Parameters.Add(ip);
+                    com.Parameters.Add(mail);
+                    int i = com.ExecuteNonQuery();
                 }
             }
         }

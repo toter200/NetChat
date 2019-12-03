@@ -13,7 +13,6 @@ namespace NCServerLibrary
 
             ServerManager.CreateDatabase();
 
-
             Console.WriteLine();
             Console.WriteLine("---Creating new Users---");
             Console.WriteLine();
@@ -95,6 +94,11 @@ namespace NCServerLibrary
             ServerManager.AlterUsername("toter200", mail2);
             Console.WriteLine($"Username of {user2}: " + ServerManager.GetUser(mail2));
 
+            Console.WriteLine();
+            Console.WriteLine("--- Add new Device ---");
+            ServerManager.CreateNewDevice("3.3.3.3", mail1);
+            Console.WriteLine(ServerManager.GetIp(mail1));
+            Console.WriteLine();
 
 
             Console.WriteLine();
@@ -106,7 +110,6 @@ namespace NCServerLibrary
             Console.WriteLine();
             Console.WriteLine("Deleting Database...");
             ServerManager.DeleteDatabase();
-	    ServerManager.CreateDatabase();
         }
     }
 }
