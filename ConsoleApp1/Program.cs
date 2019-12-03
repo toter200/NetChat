@@ -106,6 +106,7 @@ namespace NCServerLibrary
             Console.WriteLine();
             Console.WriteLine("Deleting Database...");
             ServerManager.DeleteDatabase();
+	    ServerManager.CreateDatabase();
         }
     }
 }
