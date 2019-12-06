@@ -10,20 +10,28 @@ namespace NCServerLibrary
             string mail2 = "hajduk.d01@htl-ottakring.ac.at";
             string user1 = "meikev3";
             string user2 = "toter200";
+            string ip1 = "172.0.0.1";
+            string ip2 = "192.172.0.1";
+
+            string aip1 = "172.255.255.1";
+            string aip2 = "192.172.255.1";
+
+
 
             ServerManager.CreateDatabase();
 
             Console.WriteLine();
             Console.WriteLine("---Creating new Users---");
             Console.WriteLine();
-            ServerManager.CreateUser("172.0.0.1", user1, mail1);
+            ServerManager.CreateUser(ip1, user1, mail1);
             Console.WriteLine($"username of the new User: " + ServerManager.GetUser(mail1));
             Console.WriteLine($"IP of the new User: " + ServerManager.GetIp(mail1));
             Console.WriteLine($"Status of the new User: " + ServerManager.GetStatus(mail1));
             Console.WriteLine($"Email of the new User: " + ServerManager.GetEmail(mail1));
 
+
             Console.WriteLine();
-            ServerManager.CreateUser("192.172.0.1", user2, mail2);
+            ServerManager.CreateUser(ip2, user2, mail2);
             Console.WriteLine($"username of the new User: " + ServerManager.GetUser(mail2));
             Console.WriteLine($"IP of the new User: " + ServerManager.GetIp(mail2));
             Console.WriteLine($"Status of the new User: " + ServerManager.GetStatus(mail2));
@@ -40,6 +48,9 @@ namespace NCServerLibrary
             Console.WriteLine(ServerManager.GetEmail(user2));
             Console.WriteLine(ServerManager.GetUser(mail1));
             Console.WriteLine(ServerManager.GetUser(mail2));
+            Console.WriteLine("--- Get Status of Device");
+            Console.WriteLine(ServerManager.GetStatusOfDevice(ip1));
+            Console.WriteLine(ServerManager.GetStatusOfDevice(ip2));
             Console.WriteLine();
 
             Console.WriteLine("---Alter table functions---");
@@ -55,33 +66,33 @@ namespace NCServerLibrary
             Console.WriteLine($"Email of {user2} " + ServerManager.GetEmail(user2));
 
             Console.WriteLine();
-            ServerManager.AlterIp("3.4.5.6", mail1);
+            ServerManager.AlterIp(aip1, mail1);
             Console.WriteLine($"IP of {user1} " + ServerManager.GetIp(mail1));
-            ServerManager.AlterIp("1.1.1.1", mail1);
+            ServerManager.AlterIp(ip1, mail1);
             Console.WriteLine($"IP of {user1} " + ServerManager.GetIp(mail1));
-            ServerManager.AlterIp("3.4.5.6", mail2);
+            ServerManager.AlterIp(aip2, mail2);
             Console.WriteLine($"IP of {user2} " + ServerManager.GetIp(mail2));
-            ServerManager.AlterIp("2.2.2.2", mail2);
+            ServerManager.AlterIp(ip2, mail2);
             Console.WriteLine($"IP of {user2} " + ServerManager.GetIp(mail2));
 
             Console.WriteLine();
-            ServerManager.AlterStatus(0, mail1);
+            ServerManager.AlterStatus(0, ip1);
             Console.WriteLine($"Status of {user1}: " + ServerManager.GetStatus(mail1));
-            ServerManager.AlterStatus(1, mail1);
+            ServerManager.AlterStatus(1, ip1);
             Console.WriteLine($"Status of {user1}: " + ServerManager.GetStatus(mail1));
-            ServerManager.AlterStatus(0, mail2);
+            ServerManager.AlterStatus(0, ip2);
             Console.WriteLine($"Status of {user2}: " + ServerManager.GetStatus(mail2));
-            ServerManager.AlterStatus(1, mail2);
+            ServerManager.AlterStatus(1, ip2);
             Console.WriteLine($"Status of {user2}: " + ServerManager.GetStatus(mail2));
 
             Console.WriteLine();
-            ServerManager.AlterStatusAuto(mail1);
+            ServerManager.AlterStatusAuto(ip1);
             Console.WriteLine($"Auto Status of {user1}: " + ServerManager.GetStatus(mail1));
-            ServerManager.AlterStatusAuto(mail1);
+            ServerManager.AlterStatusAuto(ip1);
             Console.WriteLine($"Auto Status of {user1}: " + ServerManager.GetStatus(mail1));
-            ServerManager.AlterStatusAuto(mail2);
+            ServerManager.AlterStatusAuto(ip2);
             Console.WriteLine($"Auto Status of {user2}: " + ServerManager.GetStatus(mail2));
-            ServerManager.AlterStatusAuto(mail2);
+            ServerManager.AlterStatusAuto(ip2);
             Console.WriteLine($"Auto Status of {user2}: " + ServerManager.GetStatus(mail2));
 
             Console.WriteLine();
