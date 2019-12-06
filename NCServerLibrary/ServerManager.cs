@@ -113,6 +113,7 @@ namespace NCServerLibrary
             }
         }
 
+
         public static bool GetStatus(string email)
         {
             //string query = "SELECT status FROM dev WHERE userID = @email;";
@@ -222,6 +223,7 @@ namespace NCServerLibrary
                 return "Mail";
             }
         }
+
 
         public static void AlterEmail(string newEmail, string username)
         {

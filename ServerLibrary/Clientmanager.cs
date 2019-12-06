@@ -33,7 +33,7 @@ namespace ServerLibrary
                     ServerManager.AlterStatusAuto(mail);
                     break;
                 case "7":
-                    ServerManager.
+                    ServerManager.CreateNewDevice(ip, mail);
                         break;
                 default:
                     break;
