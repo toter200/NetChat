@@ -58,9 +58,10 @@ namespace NCSharedlib
         /// <param name="text">string to send</param>
         /// <param name="ip">remote ip address</param>
         /// <param name="port">remote port</param>
-        public static void SendMessage(string text, IPAddress ip, int port)
+        public static void SendMessage(string text, IPAddress ip, int port, int flag)
         {
-            
+
+            text = flag + ";" + text; 
             
             IPEndPoint remote = new IPEndPoint(ip, port);
             var tcpClient = new TcpClient();

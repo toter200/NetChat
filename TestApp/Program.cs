@@ -11,9 +11,9 @@ namespace TestApp
             User localUser = new User("testUser", "hajduk.d01@htl-ottakring.ac.at", 1 , IPAddress.Parse("192.168.137.252"));
             User remoteUser = new User("remoteUser", "remote@htl-ottakring.ac.at", 2 , IPAddress.Parse("192.168.137.252"));
             localUser.NewChat(remoteUser);
-            
-            MemoryManager.WriteToFile(localUser);
-            User readUser= MemoryManager.ReadFormFile();
+ 
+            DotNetSerializer.WriteToFile(localUser);
+            User readUser= DotNetSerializer.ReadFromFile();
             Console.WriteLine(readUser);
 
             Console.WriteLine(readUser.mail);

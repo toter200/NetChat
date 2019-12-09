@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace NCSharedlib
 {
+    [DataContract]
     public class User
     {
         /// <summary>
@@ -73,7 +75,6 @@ namespace NCSharedlib
             this.Chats = new List<Chat>();
         }
 
-        [JsonConstructor]
         internal User(string mail, string name, string ip, int id, List<Chat> chats)
         {
             this.mail = mail;
