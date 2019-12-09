@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
+
 namespace NCSharedlib
 {
     public class Chat
@@ -12,7 +14,7 @@ namespace NCSharedlib
         /// <summary>
         /// Local User on the Device
         /// </summary>
-        public User localUser { get; private set; }
+        public User localUser { get; set; }
 
         /// <summary>
         /// List of all messages
@@ -24,15 +26,23 @@ namespace NCSharedlib
         /// </summary>
         /// <param name="localUser">Local user on current Device</param>
         /// <param name="u2">Remote user on the internet</param>
-        public Chat(User localUser, User u2)
+        [JsonConstructor]
+        public Chat(User localUser, User reciever)
+        {
+            this.Reciever = reciever;
+            this.localUser = localUser;
+            msgList = new List<Message>();
+        }
+        
+        public Chat( User u2)
         {
             this.Reciever = u2;
-            this.localUser = localUser;
+            //this.localUser = localUser;
             msgList = new List<Message>();
         }
 
         /// <summary>
-        /// reciev a new message and sort it by date
+        /// receive a new message and sort it by date
         /// </summary>
         /// <param name="msg">Message object</param>
         internal void Add(Message msg)

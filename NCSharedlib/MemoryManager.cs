@@ -9,17 +9,20 @@ namespace NCSharedlib
     /// </summary>
     public static class MemoryManager
     {
+        private static JsonSerializer serializer = new JsonSerializer();
+        
+        //static JsonSerializer 
         /// <summary>
         /// Write all the informaiton of the localUser to a File
         /// </summary>
         /// <param name="localUser"></param>
         public static void WriteToFile(User localUser)
         {
-            
-            JsonSerializer serializer = new JsonSerializer();
             using (StreamWriter sr = new StreamWriter(@"./data.json"))
             {
-                Console.WriteLine("Written to file");
+                serializer.Formatting = Formatting.Indented;
+                serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
+                serializer.Converters.Add(new IpAddressConverter());
                 serializer.Serialize(sr, localUser);
             }
         }
@@ -31,12 +34,14 @@ namespace NCSharedlib
         public static User ReadFormFile()
         {
             User localUser;
-            JsonSerializer serializer = new JsonSerializer();
             using (StreamReader sr = new StreamReader(@"./data.json"))
             {
+                serializer.Formatting = Formatting.Indented;
+                serializer.Converters.Add(new IpAddressConverter());
+                serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
                 localUser = (User) serializer.Deserialize(sr, typeof(User));
             }
-
+            
             return localUser;
         }
     }

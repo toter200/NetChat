@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using Newtonsoft.Json;
 
 namespace NCSharedlib
 {
@@ -72,14 +73,23 @@ namespace NCSharedlib
             this.Chats = new List<Chat>();
         }
 
+        [JsonConstructor]
+        internal User(string mail, string name, string ip, int id, List<Chat> chats)
+        {
+            this.mail = mail;
+            this.ip = IPAddress.Parse(ip);
+            this.Id = id;
+            this.Chats = chats;
+            this.Name = name;
+        }
         
         /// <summary>
         /// Create a new Chat between Local user and remote user
         /// </summary>
         /// <param name="chat"></param>
-        public void NewChat(User localUser, User remoteUser)
+        public void NewChat(User remoteUser)
         {
-            Chat newChat = new Chat(localUser, remoteUser);
+            Chat newChat = new Chat(this, remoteUser);
             Chats.Add(newChat);
         }
 
