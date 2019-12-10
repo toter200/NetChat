@@ -31,7 +31,7 @@
         android:background="#00FFFFFF"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        android:tint="#FFFFFF"
+        android:tint="#FFFF00"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputEditText"
