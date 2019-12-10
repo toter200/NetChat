@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
@@ -12,6 +13,8 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using NCSharedlib;
 using System.Threading;
+using Avalonia.Controls.Templates;
+using Avalonia.Data;
 using Avalonia.Threading;
 using SharpDX.DXGI;
 
@@ -60,14 +63,32 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+
+            StackPanel stackPanel = this.FindControl<StackPanel>("stck");
             
             
+            var template = new FuncDataTemplate<User>(x =>
+                new Button
+                {
+                    [!Button.ContentProperty] = new Binding("mail")
+                });
+
+            stackPanel.Orientation = Orientation.Horizontal;
+            stackPanel.DataTemplates.Add(template);
+            //localUser = MemoryManager.ReadFromFile();
+            
+            
+            #region LiveTesting
+
             netManager = new NetworkingManager(new Clientmanager(currentChat));
             
             netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
             
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet));
             us1 = new User("loopback suer", IPAddress.Loopback);
+            
+            
+            //stackPanel.Children.Add(localUser);
             
             chat = new Chat(localUser, us1);
             Chat localChat = new Chat(localUser, localUser);
@@ -83,7 +104,9 @@ namespace Avalonia.NETCoreApp
             currentChatList.Items = currentChat;
             Message msg = new Message(NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
             
-            //localUser.SendMessage(msg, chat);
+            
+
+            #endregion
                       
         }
 
@@ -120,6 +143,13 @@ namespace Avalonia.NETCoreApp
             {
                 throw;
             }
+        }
+
+        public void OnButtonChat(Object sender, EventArgs e)
+        {
+            
+            //User us = ((Button) sender).DataContext as User;
+            
         }
         private void ChatChanged(object sender, NotifyCollectionChangedEventArgs e)
         {

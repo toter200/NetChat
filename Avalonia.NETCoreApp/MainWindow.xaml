@@ -50,12 +50,24 @@
            -->
            <StackPanel>
                <Button> New Chat</Button>
-               <ListBox Width="150" Name="ChatList">
+               <ListBox Width="300" Name="ChatList">
+                   <StackPanel Name="stck">
+                       
+                   </StackPanel>
                    <ListBox.DataTemplates>
                        <DataTemplate x:Key="ChatTemplate">
-                           <StackPanel Orientation="Horizontal">
-                               <Button Content="{Binding Path=item1.Reciever}"></Button>
-                               <Button Content="{Binding Path=item2.Reciever}"></Button>
+                          <StackPanel Name="stck" Orientation="Horizontal">
+                          <!--<Button DataContext="{Binding Path=Item1}">
+                              <TextBlock  Text="{Binding Path=Reciever.mail}">
+                                    
+                                </TextBlock>
+                           </Button>
+                          
+                          <Button>
+                                <TextBlock Text="{Binding Path=Item2.Reciever.mail}">
+                                    
+                                </TextBlock>
+                           </Button> -->
                            </StackPanel>
                        </DataTemplate>
                    </ListBox.DataTemplates>
@@ -72,10 +84,10 @@
                    <ListBox Name="currentChat">
                        <ListBox.DataTemplates >
                             <DataTemplate x:Key="MessageTemplate">
-                                <TextBlock  HorizontalAlignment="{Binding Path=Alignment, Converter={StaticResource MessageAlignmentConverter}}"
-                                           Text="{Binding Path=Content}">
+                                <!--<TextBlock  horizontalalignment="{binding path=alignment, converter={staticresource messagealignmentconverter}}"
+                                           text="{binding path=content}">
                                     
-                                </TextBlock>
+                                </textBlock> -->
                             </DataTemplate>
                        </ListBox.DataTemplates>
                    </ListBox>
