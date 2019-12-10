@@ -33,22 +33,27 @@ namespace ServerLibrary
         /// <param name="port">Port to listen to</param>
         public void StartTcpListenerThread(IPAddress ip, int port)
         {
+            Console.WriteLine("Start the Listener");
             TcpListener listener = new TcpListener(ip, port);
             listener.Start();
-
+            Console.WriteLine("Listener Started");
             var thread = new Thread(() =>
             {
-                byte[] bytes = new byte[1024];
                 while (true)
                 {
 
-                    Socket client = listener.AcceptSocket();
+                    TcpClient client = listener.AcceptTcpClient();
+                    byte[] bytes = new byte[client.ReceiveBufferSize];
 
                     // IPEndPoint remoteIpEndPoint = client.RemoteEndPoint as IPEndPoint;
                     // string ipAddress = remoteIpEndPoint.Address.ToString();
-
-                    int size = client.Receive(bytes);
-                    //reciever.MsgRecieved(new Message(Encoding.UTF8.GetString(bytes, 0, size), 1));
+                    Console.WriteLine("Receive");
+                    using (var stream = client.GetStream())
+                    {
+                        stream.Read(bytes, 0, client.ReceiveBufferSize);
+                    }
+                    string receivedText = Encoding.UTF8.GetString(bytes);
+                    reciever.MsgRecieved(receivedText, ip, port);
                     client.Close();
                 }
             });

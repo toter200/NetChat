@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace ServerLibrary
@@ -14,6 +15,6 @@ namespace ServerLibrary
         /// </summary>
         /// <param name="obj">new Message object</param>
         /// <returns>Processed message object</returns>
-        void MsgRecieved(object obj, string ip);
+        void MsgRecieved(object obj, IPAddress ip, int port);
     }
 }
