@@ -12,30 +12,36 @@ namespace NCSharedlib
         /// <summary>
         /// E-mail used by User to Register
         /// </summary>
+        [DataMember]
         public string mail { get; private set; }
         
         /// <summary>
         /// user id set by server
         /// </summary>
+        [DataMember]
         public int Id { get; private set; }
         /// <summary>
         /// Constantly changing ip address 
         /// </summary>
+        [DataMember]
         public IPAddress ip;
 
         /// <summary>
         /// Username for a User
         /// </summary>
+        [DataMember]
         public string Name { get; private set; }
         
         /// <summary>
         /// fixed port for communication
         /// </summary>
+        [DataMember]
         public static int port = 48000;
         
         /// <summary>
         /// all hats known to User
         /// </summary>
+        [DataMember]
         public List<Chat> Chats;
 
         

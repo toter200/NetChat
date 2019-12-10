@@ -1,24 +1,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace NCSharedlib
 {
+    [DataContract]
     public class Chat
     {
         /// <summary>
         /// User at the other end of the Chat
         /// </summary>
+        [DataMember]
         public User Reciever { get; private set; }
         /// <summary>
         /// Local User on the Device
         /// </summary>
+        [DataMember]
         public User localUser { get; set; }
 
         /// <summary>
         /// List of all messages
         /// </summary>
+        [DataMember]
         public List<Message> msgList { get; private set; }
 
         /// <summary>
@@ -26,7 +31,6 @@ namespace NCSharedlib
         /// </summary>
         /// <param name="localUser">Local user on current Device</param>
         /// <param name="u2">Remote user on the internet</param>
-        [JsonConstructor]
         public Chat(User localUser, User reciever)
         {
             this.Reciever = reciever;
@@ -49,7 +53,7 @@ namespace NCSharedlib
         {
             msgList.Add(msg);
             msgList.OrderBy(x=>x.Timestamp);
-            NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port);
+            NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port, 4);
         }
     }
 }

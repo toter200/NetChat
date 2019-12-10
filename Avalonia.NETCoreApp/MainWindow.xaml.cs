@@ -13,6 +13,7 @@ using Avalonia.Media;
 using NCSharedlib;
 using System.Threading;
 using Avalonia.Threading;
+using SharpDX.DXGI;
 
 
 /*
@@ -66,9 +67,14 @@ namespace Avalonia.NETCoreApp
             netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
             
             localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet));
-            us1 = new User("loopback suer", IPAddress.Parse());
+            us1 = new User("loopback suer", IPAddress.Loopback);
             
             chat = new Chat(localUser, us1);
+            Chat localChat = new Chat(localUser, localUser);
+            
+            //Tuple<string, int> t = new Tuple<string, int>("1", 2);
+            
+            knownChatCollection.Add(new Tuple<Chat, Chat>(chat, localChat));
             
             ListBox chatlist = this.FindControl<ListBox>("ChatList");
             ListBox currentChatList = this.FindControl<ListBox>("currentChat");
@@ -100,11 +106,6 @@ namespace Avalonia.NETCoreApp
             }
         }
 
-        /*public void NewMessage(Message msg)
-        {
-            currentChat.Add(msg);
-        }
-        */
         private void OnButtonSend(object sender, EventArgs e)
         {
             try

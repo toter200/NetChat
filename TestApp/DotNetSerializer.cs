@@ -14,6 +14,7 @@ namespace TestApp
         public static void WriteToFile(User localUser)
         {
             StreamWriter sw = new StreamWriter(@"./data.json");
+            
             serializer.WriteObject(sw.BaseStream, localUser);
         }
 

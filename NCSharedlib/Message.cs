@@ -1,33 +1,40 @@
 using System;
+using System.Runtime.Serialization;
 
 namespace NCSharedlib
 {
     /// <summary>
     /// Wrapper for text messages
     /// </summary>
+    [DataContract]
     public class Message
     {
         
         /// <summary>
         /// Content of the Message = text
         /// </summary>
+        [DataMember]
         public string Content { get; private set; }
         
         /// <summary>
         /// Sender of the messafe
         /// </summary>
+        [DataMember]
         public User MessageOwner { get; private set; }
         
         /// <summary>
         /// Time the message was send
         /// </summary>
+        [DataMember]
         public DateTime Timestamp { get; private set; }
         
         /// <summary>
         /// Flag to check if message is Synchronized between devices or not
         /// </summary>
+        [DataMember]
         public bool Synchronized { get; private set; }
 
+        [DataMember]
         public string Alignment { get; private set; }
         
         /// <summary>

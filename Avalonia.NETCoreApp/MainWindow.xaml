@@ -50,8 +50,16 @@
            -->
            <StackPanel>
                <Button> New Chat</Button>
-               <ListBox Width="150" Name="ChatList"
-                        ItemTemplate="{StaticResource ChatTemplate}"></ListBox>
+               <ListBox Width="150" Name="ChatList">
+                   <ListBox.DataTemplates>
+                       <DataTemplate x:Key="ChatTemplate">
+                           <StackPanel Orientation="Horizontal">
+                               <Button Content="{Binding Path=item1.Reciever}"></Button>
+                               <Button Content="{Binding Path=item2.Reciever}"></Button>
+                           </StackPanel>
+                       </DataTemplate>
+                   </ListBox.DataTemplates>
+               </ListBox>
                
            </StackPanel>
        </Border>      
@@ -65,7 +73,7 @@
                        <ListBox.DataTemplates >
                             <DataTemplate x:Key="MessageTemplate">
                                 <TextBlock  HorizontalAlignment="{Binding Path=Alignment, Converter={StaticResource MessageAlignmentConverter}}"
-                                           Text="{Binding Path=Content}" Background="Red">
+                                           Text="{Binding Path=Content}">
                                     
                                 </TextBlock>
                             </DataTemplate>
