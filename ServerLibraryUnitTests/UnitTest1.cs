@@ -20,14 +20,14 @@ namespace Tests
             //Assert.Pass();
 
             #region inputString 0-7
-            string inputString0 = "0;email1;user1";
-            string inputString1 = "1;email1;user1";
-            string inputString2 = "2;email1;user1";
-            string inputString3 = "3;email1;user1";
-            string inputString4 = "4;email1;user1";
-            string inputString5 = "5;email1;user1";
-            string inputString6 = "6;email1;user1";
-            string inputString7 = "7;email1;user1";
+            string inputString0 = "0;email2;user2";
+            string inputString1 = "1;email2;user2";
+            string inputString2 = "2;email2;user2";
+            string inputString3 = "3;email2;user2";
+            string inputString4 = "4;email2;user2";
+            string inputString5 = "5;email2;user2";
+            string inputString6 = "6;email2;user2";
+            string inputString7 = "7;email2;user2";
             #endregion
 
             NetworkingManager net = new NetworkingManager(new Clientmanager());
@@ -44,8 +44,6 @@ namespace Tests
             ServerLibrary.NetworkingManager.SendMessage(inputString7, IPAddress.Loopback, 48000);
             #endregion
 
-            Console.WriteLine();
-            Console.ReadKey();
         }
 
     }

@@ -33,10 +33,10 @@ namespace ServerLibrary
         /// <param name="port">Port to listen to</param>
         public void StartTcpListenerThread(IPAddress ip, int port)
         {
-            Console.WriteLine("Start the Listener");
+
             TcpListener listener = new TcpListener(ip, port);
             listener.Start();
-            Console.WriteLine("Listener Started");
+
             var thread = new Thread(() =>
             {
                 while (true)
@@ -45,9 +45,6 @@ namespace ServerLibrary
                     TcpClient client = listener.AcceptTcpClient();
                     byte[] bytes = new byte[client.ReceiveBufferSize];
 
-                    // IPEndPoint remoteIpEndPoint = client.RemoteEndPoint as IPEndPoint;
-                    // string ipAddress = remoteIpEndPoint.Address.ToString();
-                    Console.WriteLine("Receive");
                     using (var stream = client.GetStream())
                     {
                         stream.Read(bytes, 0, client.ReceiveBufferSize);

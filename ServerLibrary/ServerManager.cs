@@ -15,7 +15,7 @@ namespace ServerLibrary
     public class ServerManager
     {
         static string connectionString = "Server=localhost;Database=ncdb;Uid=NetChat;Pwd=;";
-
+        #region Create Methods
         /// <summary>
         /// Creates a new Databases namen "ncdb"
         /// </summary>
@@ -137,8 +137,9 @@ namespace ServerLibrary
                 }
             }
         }
+        #endregion
 
-
+        #region Get Methods
         /// <summary>
         /// Returns a boolean of the Status of the Device of the user email, 
         /// returns True if 1 or more Devices of this user are Online
@@ -274,8 +275,9 @@ namespace ServerLibrary
                 return "Mail";
             }
         }
+        #endregion
 
-
+        #region Alter Methods
         /// <summary>
         /// Alters the email address of the user with the handed over username to the handed over email Address
         /// </summary>
@@ -397,5 +399,6 @@ namespace ServerLibrary
 
             }
         }
+        #endregion
     }
 }
