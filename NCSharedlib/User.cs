@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace NCSharedlib
 {
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class User
     {
         /// <summary>
@@ -23,8 +23,16 @@ namespace NCSharedlib
         /// <summary>
         /// Constantly changing ip address 
         /// </summary>
-        [DataMember]
+        [IgnoreDataMember]
         public IPAddress ip;
+
+        [DataMember(Name = "ip")]
+        public string IPAddressSerlilized
+        {
+            get { return ip.ToString(); }
+            set { ip = IPAddress.Parse(value);}
+        }
+        
 
         /// <summary>
         /// Username for a User

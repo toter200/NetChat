@@ -1,31 +1,36 @@
 using System.IO;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Xml;
 using NCSharedlib;
 
 namespace TestApp
 {
     public static class DotNetSerializer
     {
-        private static  DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(User));
+        private static  DataContractSerializer serializer = new DataContractSerializer(typeof(User));
 
         //TODO:
         //implement DataContractJsonSerilizer
         public static void WriteToFile(User localUser)
         {
-            StreamWriter sw = new StreamWriter(@"./data.json");
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            XmlWriter xw = XmlWriter.Create(@"./data.xml", settings);
+            serializer.WriteObject(xw, localUser);
             
-            serializer.WriteObject(sw.BaseStream, localUser);
+            xw.Flush();
+            xw.Close();
         }
 
         public static User ReadFromFile()
         {
             User localUser;
-            using (StreamReader sr = new StreamReader(@"./data.json"))
-            {
-                localUser = (User) serializer.ReadObject(sr.BaseStream);
-            }
+            
+            XmlReader xr = new XmlTextReader(@"./data.xml");
 
+            localUser = (User) serializer.ReadObject(xr);
+            xr.Close();
             return localUser;
         } 
     }
