@@ -1,0 +1,19 @@
+##Activity schließen und neue öffnen
+
+setContentView(R.layout.activity_chat);
+
+        back_Button = (ImageButton) findViewById(R.id.back_button);
+
+        back_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Back();
+            }
+        });
+
+    }
+    public void Back(){
+        Intent intent = new Intent(this,MainActivity.class);
+        Chat.this.finish();
+    }
+
