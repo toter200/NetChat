@@ -54,20 +54,21 @@
                    <StackPanel Name="stck">
                        
                    </StackPanel>
-                   <ListBox.DataTemplates>
+ 
+                  <ListBox.DataTemplates>
                        <DataTemplate x:Key="ChatTemplate">
-                          <StackPanel Name="stck" Orientation="Horizontal">
-                          <!--<Button DataContext="{Binding Path=Item1}">
-                              <TextBlock  Text="{Binding Path=Reciever.mail}">
+                          <StackPanel Orientation="Horizontal">
+                                <Button DataContext="{Binding Path=Item1}" Command="{Binding test}">
+                                    <TextBlock  Text="{Binding Path=Reciever.mail}">
                                     
-                                </TextBlock>
-                           </Button>
+                                    </TextBlock>
+                                </Button>
                           
-                          <Button>
-                                <TextBlock Text="{Binding Path=Item2.Reciever.mail}">
+                                <Button Command="{Binding test}">
+                                    <TextBlock Text="{Binding Path=Item2.Reciever.mail}">
                                     
-                                </TextBlock>
-                           </Button> -->
+                                    </TextBlock>
+                                </Button> 
                            </StackPanel>
                        </DataTemplate>
                    </ListBox.DataTemplates>
@@ -84,10 +85,10 @@
                    <ListBox Name="currentChat">
                        <ListBox.DataTemplates >
                             <DataTemplate x:Key="MessageTemplate">
-                                <!--<TextBlock  horizontalalignment="{binding path=alignment, converter={staticresource messagealignmentconverter}}"
-                                           text="{binding path=content}">
+                                <TextBlock  HorizontalAlignment="{Binding Path=Alignment, converter={StaticResource MessageAlignmentConverter}}"
+                                           text="{Binding Path=Content}">
                                     
-                                </textBlock> -->
+                                </TextBlock>
                             </DataTemplate>
                        </ListBox.DataTemplates>
                    </ListBox>
