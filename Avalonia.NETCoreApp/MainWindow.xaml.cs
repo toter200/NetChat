@@ -21,6 +21,7 @@ using Avalonia.Diagnostics.ViewModels;
 using Avalonia.Input;
 using Avalonia.Threading;
 using SharpDX.DXGI;
+using System.IO;
 
 
 /*
@@ -67,16 +68,32 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+
             
-            this.Hide();
-            var register = new Register();
-            register.ShowDialog(this);
+            //TODO:
+            //Kerer Fragen ob die Register seite xml schreiben soll und gleich wieder Lesen
 #if DEBUG
+            if (File.Exists(@"./data.xml"))
+            { 
+                File.Delete(@"./data.xml");
+            }
+#endif
+            if (!File.Exists(@"./data.xml"))
+            {
+                this.Hide();
+                var register = new Register();
+                //register.Show();
+                register.ShowDialog(this);
+            }
+
+            //localUser = MemoryManager.ReadFromFile();
+            
+#if !DEBUG
             netManager = new NetworkingManager(new Clientmanager(currentChat));
             
-            netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
+            netManager.StartTcpListenerThread(IPAddress.Loopback, GlobalVars.Port);
             
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet));
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress());
             us1 = new User("loopback user", IPAddress.Loopback);
             
             
@@ -94,7 +111,7 @@ namespace Avalonia.NETCoreApp
             StackPanel wrapper = this.FindControl<StackPanel>("wrapper");
             chatlist.Items = knownChatCollection;
             currentChatList.Items = currentChat;
-            Message msg = new Message(NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
+            Message msg = new Message(NetworkingManager.GetIpAddress().ToString(), localUser, "LEFT");
 #endif
             
         }
@@ -136,7 +153,8 @@ namespace Avalonia.NETCoreApp
 
         public void OnButtonNewChat(object sender, EventArgs e)
         {
-            
+            var newChatWindow = new NewChat();
+            newChatWindow.ShowDialog(this);
         }
         
         public void OnButtonChat(object sender, EventArgs e)

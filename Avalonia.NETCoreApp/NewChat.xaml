@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avalonia.NETCoreApp"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
+        x:Class="Avalonia.NETCoreApp.NewChat"
+        Title="NetChat - New Chat" Height="130" Width="300">
+        <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Margin="5"> Start a new Chat</TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="15" >
+                                <StackPanel Margin="5">
+                                
+                                        <TextBlock> E-mail: </TextBlock>
+                                </StackPanel>
+                                
+                                <StackPanel>
+                                        <TextBox Width="200" Name="mailBox"></TextBox>
+                                </StackPanel>
+                                
+                        </StackPanel>
+                <Button Height="50">Start Chating</Button>
+        </StackPanel>
+</Window>

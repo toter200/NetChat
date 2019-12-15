@@ -76,7 +76,7 @@ namespace NCSharedlib
         /// </summary>
         /// <param name="type">interface type </param>
         /// <returns>return the IPaddress as a IPAddress object</returns>
-        public static IPAddress GetIpAddress(NetworkInterfaceType type)
+        public static IPAddress GetIpAddress()
         {
             string externalip = new WebClient().DownloadString("http://icanhazip.com");            
             return IPAddress.Parse(externalip.Trim());

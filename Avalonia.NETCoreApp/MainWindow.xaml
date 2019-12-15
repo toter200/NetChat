@@ -36,9 +36,9 @@
            <DockPanel Name="Settignsbar" LastChildFill="False" Width="60"
                       Background="Black" Margin="5" >
                <Image DockPanel.Dock="Top"></Image>
-               <Button DockPanel.Dock="Top" Margin="10" Background="black">USR</Button>
-               <Button DockPanel.Dock="Top" Margin="10" Background="black">Status</Button>
-               <Button DockPanel.Dock="Bottom" Margin="10" Background="black">Set</Button>
+               <Button DockPanel.Dock="Top" Margin="10" Background="black"  Foreground="white">USR</Button>
+               <Button DockPanel.Dock="Top" Margin="10" Background="black" Foreground="white">Status</Button>
+               <Button DockPanel.Dock="Bottom" Margin="10" Background="black" Foreground="white">Set</Button>
            </DockPanel>
        </Border>
        
@@ -49,7 +49,7 @@
                </StackPanel>
            -->
            <StackPanel Name="wrapper">
-               <Button> New Chat</Button>
+               <Button Click="OnButtonNewChat"> New Chat</Button>
                <ListBox Width="300" Name="ChatList">
  
                   <ListBox.DataTemplates>

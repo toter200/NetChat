@@ -5,6 +5,20 @@
         xmlns:local="clr-namespace:Avalonia.NETCoreApp"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
         x:Class="Avalonia.NETCoreApp.Register"
-        Title="NetChat - Register" Height="200" Width="240">
-        <Button> Register! </Button>
+        Title="NetChat - Register" Height="130" Width="300">
+        <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Margin="5"> Register or Login</TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="15" >
+                        <StackPanel Margin="5">
+                        
+                                <TextBlock> E-mail: </TextBlock>
+                        </StackPanel>
+                        
+                        <StackPanel>
+                                <TextBox Width="200" Name="mailBox"></TextBox>
+                        </StackPanel>
+                        
+                </StackPanel>
+                <Button Height="50" Click="OnButtonSend">Send</Button>
+        </StackPanel>
 </Window>
