@@ -13,7 +13,6 @@ namespace Avalonia.NETCoreApp
         }
         public  Message MsgRecieved(Message obj)
         {
-            msg.Add(obj);
             return obj;
         }
     }

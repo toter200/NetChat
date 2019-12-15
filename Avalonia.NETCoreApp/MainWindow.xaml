@@ -48,28 +48,17 @@
                <Button Background="Gray" Margin="10">New Chat</Button>
                </StackPanel>
            -->
-           <StackPanel>
+           <StackPanel Name="wrapper">
                <Button> New Chat</Button>
                <ListBox Width="300" Name="ChatList">
-                   <StackPanel Name="stck">
-                       
-                   </StackPanel>
  
                   <ListBox.DataTemplates>
                        <DataTemplate x:Key="ChatTemplate">
-                          <StackPanel Orientation="Horizontal">
                                 <Button DataContext="{Binding Path=Item1}" Command="{Binding test}">
                                     <TextBlock  Text="{Binding Path=Reciever.mail}">
                                     
                                     </TextBlock>
                                 </Button>
-                          
-                                <Button Command="{Binding test}">
-                                    <TextBlock Text="{Binding Path=Item2.Reciever.mail}">
-                                    
-                                    </TextBlock>
-                                </Button> 
-                           </StackPanel>
                        </DataTemplate>
                    </ListBox.DataTemplates>
                </ListBox>

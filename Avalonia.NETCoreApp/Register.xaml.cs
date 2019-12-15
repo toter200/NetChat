@@ -1,16 +1,15 @@
-using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace Avalonia.NETCoreApp
 {
-    public class App : Application
+    public class Register : Window
     {
-        public override void Initialize()
+        public Register()
         {
             AvaloniaXamlLoader.Load(this);
-            
         }
-
+        
         
     }
 }

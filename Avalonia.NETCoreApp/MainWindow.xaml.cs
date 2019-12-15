@@ -18,6 +18,7 @@ using System.Windows.Input;
 using Avalonia.Controls.Templates;
 using Avalonia.Data;
 using Avalonia.Diagnostics.ViewModels;
+using Avalonia.Input;
 using Avalonia.Threading;
 using SharpDX.DXGI;
 
@@ -66,22 +67,11 @@ namespace Avalonia.NETCoreApp
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-
-            /*StackPanel stackPanel = this.FindControl<StackPanel>("stck");
             
-            
-            var template = new FuncDataTemplate<User>(x =>
-                new Button
-                {
-                    [!Button.ContentProperty] = new Binding("mail")
-                });
-
-            stackPanel.Orientation = Orientation.Horizontal;
-            stackPanel.DataTemplates.Add(template);*/
-            //localUser = MemoryManager.ReadFromFile();
-
-            #region LiveTesting
-
+            this.Hide();
+            var register = new Register();
+            register.ShowDialog(this);
+#if DEBUG
             netManager = new NetworkingManager(new Clientmanager(currentChat));
             
             netManager.StartTcpListenerThread(IPAddress.Loopback, User.port);
@@ -101,14 +91,11 @@ namespace Avalonia.NETCoreApp
             
             ListBox chatlist = this.FindControl<ListBox>("ChatList");
             ListBox currentChatList = this.FindControl<ListBox>("currentChat");
-
+            StackPanel wrapper = this.FindControl<StackPanel>("wrapper");
             chatlist.Items = knownChatCollection;
             currentChatList.Items = currentChat;
             Message msg = new Message(NetworkingManager.GetIpAddress(NetworkInterfaceType.Ethernet).ToString(), localUser, "LEFT");
-            
-            
-
-            #endregion
+#endif
             
         }
 
@@ -147,6 +134,11 @@ namespace Avalonia.NETCoreApp
             }
         }
 
+        public void OnButtonNewChat(object sender, EventArgs e)
+        {
+            
+        }
+        
         public void OnButtonChat(object sender, EventArgs e)
         {
             
@@ -193,11 +185,4 @@ namespace Avalonia.NETCoreApp
         
     }
 
-    public class MainWindowViewModel : ViewModelBase
-    {
-        public void test(User ussr)
-        {
-            Debug.WriteLine(ussr.mail);
-        }
-    }
 }

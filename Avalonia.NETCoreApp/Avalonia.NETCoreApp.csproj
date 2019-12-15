@@ -10,6 +10,10 @@
         <AvaloniaResource Include="**\*.xaml">
             <SubType>Designer</SubType>
         </AvaloniaResource>
+        <Compile Remove="PageSwitcher.cs" />
+        <Compile Update="Register.xaml.cs">
+          <DependentUpon>Register.xml</DependentUpon>
+        </Compile>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="0.8.2" />
