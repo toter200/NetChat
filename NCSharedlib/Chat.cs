@@ -12,8 +12,9 @@ namespace NCSharedlib
         /// <summary>
         /// User at the other end of the Chat
         /// </summary>
-        [DataMember]
-        public User Reciever { get; private set; }
+        [DataMember] public List<User> Reciever;
+        
+        //public User Reciever { get; private set; }
         /// <summary>
         /// Local User on the Device
         /// </summary>
@@ -38,11 +39,16 @@ namespace NCSharedlib
             msgList = new List<Message>();
         }
         
-        public Chat( User u2)
+        public Chat(User u2)
         {
-            this.Reciever = u2;
+            this.Reciever = new List<User>{ u2 };
             //this.localUser = localUser;
-            msgList = new List<Message>();
+            this.msgList = new List<Message>();
+        }
+
+        public Chat(List<User> userlist)
+        {
+            this.Reciever = userlist;
         }
 
         /// <summary>
@@ -53,7 +59,10 @@ namespace NCSharedlib
         {
             msgList.Add(msg);
             msgList.OrderBy(x=>x.Timestamp);
-            NetworkingManager.SendMessage(msg.Content, Reciever.ip, User.port, 4);
+            foreach (User usr in Reciever)
+            {
+                NetworkingManager.SendMessage(msg.Content, usr.ip, User.port, 4);
+            }
         }
     }
 }
