@@ -51,8 +51,6 @@ namespace ServerLibrary
                     }
                     string receivedText = Encoding.UTF8.GetString(bytes);
 
-
-
                     client.Client.Send(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
 
                     client.Close();
@@ -71,22 +69,6 @@ namespace ServerLibrary
         {
             string externalip = new WebClient().DownloadString("http://icanhazip.com");
             return IPAddress.Parse(externalip.Trim());
-            /*
-            foreach (NetworkInterface interf in NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (interf.NetworkInterfaceType == type && interf.OperationalStatus == OperationalStatus.Up)
-                {
-                    foreach (UnicastIPAddressInformation ip in interf.GetIPProperties().UnicastAddresses)
-                    {
-                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
-                        {
-                            return ip.Address;
-                        }
-                    }
-                }
-            }
-            return IPAddress.Loopback;
-            */
         }
     }
 }
