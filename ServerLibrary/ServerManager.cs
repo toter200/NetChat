@@ -226,7 +226,7 @@ namespace ServerLibrary
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public static string GetUser(string email)
+        public static string GetUsername(string email)
         {
             string query = "SELECT username FROM usr WHERE mail = @email;";
             using (var con = new MySqlConnection(connectionString))
@@ -274,6 +274,19 @@ namespace ServerLibrary
                 }
                 return "Mail";
             }
+        }
+
+        /// <summary>
+        /// Returns the Email Address, Username and the IP address of the first device which is up of the user with the handed over email address
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public static string GetAll(string email)
+        {
+            string username = GetUsername(email);
+            string ip = GetIp(email);
+            string output = $"{email};{username};{ip}";
+            return (output);
         }
         #endregion
 

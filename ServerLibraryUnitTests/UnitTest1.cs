@@ -20,20 +20,21 @@ namespace Tests
             //Assert.Pass();
 
             #region inputString 0-7
-            string inputString0 = "0;email2;user2";
-            string inputString1 = "1;email2;user2";
-            string inputString2 = "2;email2;user2";
-            string inputString3 = "3;email2;user2";
-            string inputString4 = "4;email2;user2";
-            string inputString5 = "5;email2;user2";
-            string inputString6 = "6;email2;user2";
-            string inputString7 = "7;email2;user2";
+            string inputString0 = "0;email2;user2;123.123.123.123";
+            string inputString1 = "1;email2;user2;123.123.123.123";
+            string inputString2 = "2;email2;user2;123.123.123.123";
+            string inputString3 = "3;email2;user2;123.123.123.123";
+            string inputString4 = "4;email2;user2;123.123.123.123";
+            string inputString5 = "5;email2;user2;123.123.123.123";
+            string inputString6 = "6;email2;user2;123.123.123.123";
+            string inputString7 = "7;email2;user2;123.123.123.123";
             #endregion
 
             NetworkingManager net = new NetworkingManager(new Clientmanager());
             net.StartTcpListenerThread(IPAddress.Loopback, 48000);
 
-            #region SendMessage 1-7
+            #region SendMessage 1-7 
+            /*
             ServerLibrary.NetworkingManager.SendMessage(inputString0, IPAddress.Loopback, 48000);
             ServerLibrary.NetworkingManager.SendMessage(inputString1, IPAddress.Loopback, 48000);
             ServerLibrary.NetworkingManager.SendMessage(inputString2, IPAddress.Loopback, 48000);
@@ -42,6 +43,7 @@ namespace Tests
             ServerLibrary.NetworkingManager.SendMessage(inputString5, IPAddress.Loopback, 48000);
             ServerLibrary.NetworkingManager.SendMessage(inputString6, IPAddress.Loopback, 48000);
             ServerLibrary.NetworkingManager.SendMessage(inputString7, IPAddress.Loopback, 48000);
+            */
             #endregion
 
         }

@@ -15,6 +15,6 @@ namespace ServerLibrary
         /// </summary>
         /// <param name="obj">new Message object</param>
         /// <returns>Processed message object</returns>
-        void MsgRecieved(object obj, IPAddress ip, int port);
+        string MsgRecieved(object obj);
     }
 }

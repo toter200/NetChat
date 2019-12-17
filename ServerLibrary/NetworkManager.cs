@@ -50,30 +50,18 @@ namespace ServerLibrary
                         stream.Read(bytes, 0, client.ReceiveBufferSize);
                     }
                     string receivedText = Encoding.UTF8.GetString(bytes);
-                    reciever.MsgRecieved(receivedText, ip, port);
+
+
+
+                    //client.Client.Send(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
+                    Console.WriteLine(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
+
                     client.Close();
                 }
             });
             thread.Start();
         }
 
-        /// <summary>
-        /// Send message to a remote address by tcp
-        /// </summary>
-        /// <param name="text">string to send</param>
-        /// <param name="ip">remote ip address</param>
-        /// <param name="port">remote port</param>
-        public static void SendMessage(string text, IPAddress ip, int port)
-        {
-
-
-            IPEndPoint remote = new IPEndPoint(ip, port);
-            var tcpClient = new TcpClient();
-            tcpClient.Connect(remote);
-            tcpClient.Client.Send(Encoding.UTF8.GetBytes(text));
-            tcpClient.Client.Close();
-            tcpClient.Close();
-        }
 
         /// <summary>
         /// Get the current local ip address

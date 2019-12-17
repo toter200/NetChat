@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#000000"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sdfs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000">
+
+            <LinearLayout
+                android:id="@+id/sdfdsffsd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="June 2018"
+                        android:textColor="#98a9b7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/logo">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gray"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="05dp"
+                                android:text="Hello, IB"
+                                android:textColor="#616e7f" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="Do you heard about Seotoolzz free android templates?"
+                                android:textColor="#616e7f" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/myTextView_Roboto_Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:horizontalSpacing="1dp"
+                        android:text="June 2018"
+                        android:textColor="#98a9b7"
+                        android:verticalSpacing="1dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ok"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/green"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="05dp"
+                                android:text="Yes!"
+                                android:textColor="#616e7f" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="They got nice android templates, by the way!"
+                                android:textColor="#616e7f" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="50 sec ago"
+                            android:textColor="#98a9b7" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/dfdsfd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="June 2018"
+                        android:textColor="#98a9b7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:src="@drawable/logo">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gray"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="05dp"
+                                android:text="Nice, Ok See Ya!"
+                                android:textColor="#616e7f" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/send_message"
+            android:layout_width="334dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/custom_edit_text"
+            android:hint="message..."
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            android:textCursorDrawable="@drawable/drawable_cursor"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="3dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/send_message"
+            app:srcCompat="@drawable/send_image" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
