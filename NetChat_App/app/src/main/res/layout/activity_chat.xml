@@ -17,9 +17,7 @@
             android:id="@+id/sdfs"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#000000"
-
-            >
+            android:background="#000000">
 
             <LinearLayout
                 android:id="@+id/sdfdsffsd"
@@ -116,7 +114,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="05dp"
                                 android:text="Yes!"
-                                android:textColor="#fff" />
+                                android:textColor="#616e7f" />
 
 
                             <TextView
@@ -124,7 +122,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="20dp"
                                 android:text="They got nice android templates, by the way!"
-                                android:textColor="#fff" />
+                                android:textColor="#616e7f" />
                         </LinearLayout>
 
                         <TextView
@@ -176,20 +174,11 @@
                                 android:textColor="#616e7f" />
 
                         </LinearLayout>
-
-
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </LinearLayout>
-
-
         </ScrollView>
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -205,10 +194,15 @@
             android:layout_gravity="bottom"
             android:background="@drawable/custom_edit_text"
             android:hint="message..."
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            android:textCursorDrawable="@drawable/drawable_cursor"/>
 
         <ImageButton
             android:id="@+id/imageButton"
