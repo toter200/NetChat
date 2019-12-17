@@ -141,10 +141,10 @@ namespace NCSharedlib
 
             foreach (var chat in Chats)
             {
-                if (chat.Reciever == user)
+                /*if (chat.Reciever == user)
                 {
                     this.SendMessage(msg, chat);
-                }
+                }*/
             }
             //OLD SYNC Method, still here because im not sure if anyone will need it
             /*List<Message> unsynched = new List<Message>();

@@ -12,23 +12,6 @@
     <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter">
         
     </local:MessageAlignmentConverter>
-        
-        <DataTemplate x:Key="ChatTemplate">
-            <StackPanel Orientation="Horizontal">
-                <Button >
-                    <Button.Content>
-                        <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
-                        
-                    </Button.Content>
-                </Button>
-                <Button>
-                    <Button.Content>
-                        <TextBlock Text="{Binding Path=Reciever}"></TextBlock>
-                    </Button.Content>
-                </Button>
-            </StackPanel>
-        </DataTemplate>
-        
     </Window.Resources>
     
    <DockPanel LastChildFill="True" Background="Gray">
@@ -54,11 +37,17 @@
  
                   <ListBox.DataTemplates>
                        <DataTemplate x:Key="ChatTemplate">
-                                <Button DataContext="{Binding Path=Item1}" Command="{Binding test}">
-                                    <TextBlock  Text="{Binding Path=Reciever.mail}">
-                                    
+                           <StackPanel Orientation="Horizontal">
+                                <Button >
+                                    <TextBlock  Text="{Binding Path=chat1}">
                                     </TextBlock>
                                 </Button>
+                           
+                                <Button >
+                                    <TextBlock Text="{Binding Path=chat2}">
+                                    </TextBlock>
+                                </Button>
+                           </StackPanel>
                        </DataTemplate>
                    </ListBox.DataTemplates>
                </ListBox>

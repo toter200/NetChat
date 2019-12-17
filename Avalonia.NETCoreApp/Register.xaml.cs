@@ -21,6 +21,7 @@ namespace Avalonia.NETCoreApp
             #if !DEBUG
                 NetworkingManager.SendMessage(mail, GlobalVars.Serverip, GlobalVars.Port, 0);
             #endif
+            this.Close();
         }
     }
 }

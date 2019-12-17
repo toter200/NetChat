@@ -97,5 +97,26 @@ namespace NCSharedlib
             return IPAddress.Loopback;
             */
         }
+
+        //TODO:
+        //Finish communication with Server
+        public static User GetUser(string mail)
+        {
+            IPEndPoint server = new IPEndPoint(GlobalVars.Serverip, GlobalVars.Port);
+            SendMessage(mail, GlobalVars.Serverip, GlobalVars.Port, 3);
+            
+            TcpClient tcpListener = new TcpClient();
+            byte[] bytes = new byte[]{};
+            byte[] buffer = new byte[4096];
+            bytes = Encoding.UTF8.GetBytes("3;" + mail + ";");
+            tcpListener.Connect(server);
+            tcpListener.Client.Send(bytes);
+            int index = tcpListener.Client.Receive(buffer);
+            string msg = Encoding.UTF8.GetString(buffer, 0, index);
+            string[] msgArray = msg.Split(';');
+            
+            return new User(msgArray[1], IPAddress.Parse(msgArray[3]));
+
+        }
     }
 }

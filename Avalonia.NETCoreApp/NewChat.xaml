@@ -19,6 +19,6 @@
                                 </StackPanel>
                                 
                         </StackPanel>
-                <Button Height="50">Start Chating</Button>
+                <Button Height="50" Click="OnButtonNewChat">Start Chating</Button>
         </StackPanel>
 </Window>

@@ -34,7 +34,7 @@ using System.IO;
 
 namespace Avalonia.NETCoreApp
 {
-    public class MainWindow : Window
+    public class MainWindow : Window, INewChat
     {
         /// <summary>
         /// Local User
@@ -53,14 +53,14 @@ namespace Avalonia.NETCoreApp
         /// </summary>
         private NetworkingManager netManager;
 
-        public ObservableCollection<Tuple<Chat, Chat>> knownChatCollection;
+        public ObservableCollection<ChatList> knownChatCollection;
 
         public User us1;
         public Chat chat;
         public MainWindow()
         {
             currentChat = new ObservableCollection<Message>(); 
-            knownChatCollection= new ObservableCollection<Tuple<Chat, Chat>>();
+            knownChatCollection= new ObservableCollection<ChatList>();
             InitializeComponent();
             currentChat.CollectionChanged += ChatChanged;
         }
@@ -72,12 +72,6 @@ namespace Avalonia.NETCoreApp
             
             //TODO:
             //Kerer Fragen ob die Register seite xml schreiben soll und gleich wieder Lesen
-#if DEBUG
-            if (File.Exists(@"./data.xml"))
-            { 
-                File.Delete(@"./data.xml");
-            }
-#endif
             if (!File.Exists(@"./data.xml"))
             {
                 this.Hide();
@@ -85,9 +79,25 @@ namespace Avalonia.NETCoreApp
                 //register.Show();
                 register.ShowDialog(this);
             }
-
-            //localUser = MemoryManager.ReadFromFile();
             
+            localUser = MemoryManager.ReadFromFile();
+
+            GlobalVars.LocalUser = localUser;
+            
+            us1 = new User("test@mail.com", IPAddress.Loopback);
+            
+            chat = new Chat(localUser, us1);
+            Chat chat2 = new Chat(us1, localUser);
+            
+            ChatList list1 = new ChatList(chat, chat2);
+            knownChatCollection.Add(list1);
+            
+            
+            ListBox chatlist = this.FindControl<ListBox>("ChatList");
+
+            chatlist.Items = knownChatCollection;
+
+            //currentChatList.Items = currentChat
 #if !DEBUG
             netManager = new NetworkingManager(new Clientmanager(currentChat));
             
@@ -109,11 +119,16 @@ namespace Avalonia.NETCoreApp
             ListBox chatlist = this.FindControl<ListBox>("ChatList");
             ListBox currentChatList = this.FindControl<ListBox>("currentChat");
             StackPanel wrapper = this.FindControl<StackPanel>("wrapper");
-            chatlist.Items = knownChatCollection;
-            currentChatList.Items = currentChat;
             Message msg = new Message(NetworkingManager.GetIpAddress().ToString(), localUser, "LEFT");
 #endif
-            
+
+        }
+
+
+        public void NewChat(Chat ch)
+        {
+            ChatList chlist = new ChatList(ch, ch);
+            knownChatCollection.Add(chlist);
         }
 
         private void ShowChat(StackPanel window, Chat chat)
@@ -153,7 +168,7 @@ namespace Avalonia.NETCoreApp
 
         public void OnButtonNewChat(object sender, EventArgs e)
         {
-            var newChatWindow = new NewChat();
+            var newChatWindow = new NewChat(this);
             newChatWindow.ShowDialog(this);
         }
         

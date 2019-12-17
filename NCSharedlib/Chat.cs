@@ -34,23 +34,31 @@ namespace NCSharedlib
         /// <param name="u2">Remote user on the internet</param>
         public Chat(User localUser, User reciever)
         {
-            this.Reciever = reciever;
+            this.Reciever = new List<User>();
+            this.Reciever.Add(reciever);
             this.localUser = localUser;
             msgList = new List<Message>();
         }
         
-        public Chat(User u2)
+        /*public Chat(User u2)
         {
             this.Reciever = new List<User>{ u2 };
-            //this.localUser = localUser;
+            this.localUser = localUser;
             this.msgList = new List<Message>();
-        }
+        }*/
 
-        public Chat(List<User> userlist)
+        public Chat( User localUser, List<User> userlist)
         {
+            this.localUser = localUser;
             this.Reciever = userlist;
         }
 
+
+        public string GetName()
+        {
+            return this.Reciever[0].mail;
+        }
+        
         /// <summary>
         /// receive a new message and sort it by date
         /// </summary>
@@ -61,7 +69,7 @@ namespace NCSharedlib
             msgList.OrderBy(x=>x.Timestamp);
             foreach (User usr in Reciever)
             {
-                NetworkingManager.SendMessage(msg.Content, usr.ip, User.port, 4);
+                NetworkingManager.SendMessage(msg.Content, usr.ip, GlobalVars.Port, 4);
             }
         }
     }
