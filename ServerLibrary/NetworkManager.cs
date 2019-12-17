@@ -53,8 +53,7 @@ namespace ServerLibrary
 
 
 
-                    //client.Client.Send(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
-                    Console.WriteLine(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
+                    client.Client.Send(Encoding.UTF8.GetBytes(reciever.MsgRecieved(receivedText)));
 
                     client.Close();
                 }
