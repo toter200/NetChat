@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj": {}
+    "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj": {}
   },
   "projects": {
-    "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj": {
+    "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
+        "projectUniqueName": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
         "projectName": "NCSharedlib",
-        "projectPath": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
-        "packagesPath": "/home/daniel/.nuget/packages/",
-        "outputPath": "/home/daniel/NetChat/NCSharedlib/obj/",
+        "projectPath": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
+        "packagesPath": "C:\\Users\\daniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/daniel/.config/NuGet/NuGet.Config"
+          "C:\\Users\\daniel\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

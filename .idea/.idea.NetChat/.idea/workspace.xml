@@ -2,16 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aef0f11-b92c-4134-820d-4bd2c928bc38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/AddChat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/ChangeChat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/CloudStatus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/Logo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/SendButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/SettingsWheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Resources/UserIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NCSharedlib/EncryptionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetChat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/ChatList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/ChatList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MessageAlignmentConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MessageAlignmentConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/MemoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/MemoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/NewChat.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/NewChat.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalonia.NETCoreApp/Register.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Avalonia.NETCoreApp/Register.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/Chat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCSharedlib/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/NCSharedlib.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NCSharedlib/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/DotNetSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/DotNetSerializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/Program.cs" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,23 +48,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MessageAlignmentConverter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7627F63B-43B8-48FB-BC1E-963737D638A2/19/668d06c1/XamlObjectWriterInternal.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MemoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/ChatList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Register.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/NewChat.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FC7C73A1-B1D4-4035-B4E5-FADC40DEAB92/29B/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/DotNetSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/obj/Debug/netcoreapp2.2/NCSharedlib.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/Chat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7627F63B-43B8-48FB-BC1E-963737D638A2/fd/1a2b367c/XamlObjectWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/nuget.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/Message.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestApp/Helper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NCSharedlib/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/EncryptionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7E4372A6-7F41-41FF-A58C-2B16F6C5747B/97/XmlTextReaderImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7627F63B-43B8-48FB-BC1E-963737D638A2/1b/86f962fe/XamlObjectWriterInternal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,23 +81,29 @@
         <option value="$PROJECT_DIR$/NetChat.sln" />
         <option value="$PROJECT_DIR$/NetChat.sync/Message.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/App.xaml.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Program.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/ClientNetwork.cs" />
-        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
         <option value="$PROJECT_DIR$/UnitTest/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Clientmanager.cs" />
         <option value="$PROJECT_DIR$/TestApp/Helper.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/IClientNetwork.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/Message.cs" />
-        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MessageAlignmentConverter.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/MemoryManager.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/User.cs" />
         <option value="$PROJECT_DIR$/TestApp/Program.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Register.xaml.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/NewChat.xaml.cs" />
         <option value="$PROJECT_DIR$/NCSharedlib/NetworkingManager.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/Chat.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/Avalonia.NETCoreApp.csproj" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/ChatList.cs" />
         <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/NCSharedlib/EncryptionManager.cs" />
+        <option value="$PROJECT_DIR$/Avalonia.NETCoreApp/MemoryManager.cs" />
+        <option value="$PROJECT_DIR$/TestApp/DotNetSerializer.cs" />
       </list>
     </option>
   </component>
@@ -79,25 +116,19 @@
   </component>
   <component name="ProjectId" id="1SYAhk2JcrKuCU4wi7EaDqaIyAR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/NCSharedlib/NCSharedlib.csproj" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected=".NET Project.Avalonia.NETCoreApp">
     <configuration name="Avalonia.NETCoreApp" type="DotNetProject" factoryName=".NET Project" temporary="true">
@@ -161,6 +192,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -196,6 +239,8 @@
       <workItem from="1574758927622" duration="9604000" />
       <workItem from="1574783004220" duration="348000" />
       <workItem from="1574937512640" duration="2436000" />
+      <workItem from="1578308246094" duration="8414000" />
+      <workItem from="1578329681990" duration="14962000" />
     </task>
     <task id="LOCAL-00001" summary="Created new Branch for the First Prototype">
       <created>1571759162989</created>
@@ -338,7 +383,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Created new Branch for the First Prototype" />
     <MESSAGE value="Created Avalonia UI proj" />
     <MESSAGE value="Started development on P1" />
@@ -355,6 +399,116 @@
     <MESSAGE value="Started working on Dekstop UI and Controls" />
     <MESSAGE value="tested new ways to implement the gui" />
     <option name="LAST_COMMIT_MESSAGE" value="tested new ways to implement the gui" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578349571320">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578349571320" />
+    <state width="488" height="466" key="DebuggerActiveHint" timestamp="1578351208830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="488" height="466" key="DebuggerActiveHint/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578351208830" />
+    <state x="694" y="283" key="EnvironmentVariablesDialog" timestamp="1578349517660">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="283" key="EnvironmentVariablesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578349517660" />
+    <state width="1877" height="192" key="GridCell.Tab.0.bottom" timestamp="1578352790939">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352790939" />
+    <state width="1877" height="192" key="GridCell.Tab.0.center" timestamp="1578352790939">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352790939" />
+    <state width="1877" height="192" key="GridCell.Tab.0.left" timestamp="1578352790939">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352790939" />
+    <state width="1877" height="192" key="GridCell.Tab.0.right" timestamp="1578352790939">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352790939" />
+    <state width="1877" height="192" key="GridCell.Tab.1.bottom" timestamp="1578352775382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775382" />
+    <state width="1877" height="192" key="GridCell.Tab.1.center" timestamp="1578352775382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775382" />
+    <state width="1877" height="192" key="GridCell.Tab.1.left" timestamp="1578352775382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775382" />
+    <state width="1877" height="192" key="GridCell.Tab.1.right" timestamp="1578352775382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775382" />
+    <state width="1877" height="192" key="GridCell.Tab.2.bottom" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.2.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.2.center" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.2.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.2.left" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.2.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.2.right" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.2.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.3.bottom" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.3.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.3.center" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.3.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.3.left" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.3.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.3.right" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.3.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.4.bottom" timestamp="1578352775296">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.4.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775296" />
+    <state width="1877" height="192" key="GridCell.Tab.4.center" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.4.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.4.left" timestamp="1578352775295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.4.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775295" />
+    <state width="1877" height="192" key="GridCell.Tab.4.right" timestamp="1578352775296">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="192" key="GridCell.Tab.4.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578352775296" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1578349317166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578349317166" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1578347477987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578347477987" />
+    <state x="-1862" y="-11" width="1540" height="908" maximized="true" key="dock-window-1" timestamp="1578308438806">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1862" y="-11" width="1540" height="908" maximized="true" key="dock-window-1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578308438806" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1578350953266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578350953266" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

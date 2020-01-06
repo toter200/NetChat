@@ -2,6 +2,7 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>netcoreapp2.2</TargetFramework>
+        <ApplicationIcon>C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\Logo.ico</ApplicationIcon>
     </PropertyGroup>
     <ItemGroup>
         <Compile Update="**\*.xaml.cs">

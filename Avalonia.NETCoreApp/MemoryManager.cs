@@ -6,16 +6,13 @@ namespace Avalonia.NETCoreApp
 {
     public class MemoryManager
     {
-        
-        private static DataContractSerializer serializer = new DataContractSerializer(typeof(User));
+        private static readonly DataContractSerializer serializer = new DataContractSerializer(typeof(User));
 
-        //TODO:
-        //implement DataContractJsonSerilizer
         public static void WriteToFile(User localUser)
         {
-            XmlWriterSettings settings = new XmlWriterSettings();
+            var settings = new XmlWriterSettings();
             settings.Indent = true;
-            XmlWriter xw = XmlWriter.Create(@"./data.xml", settings);
+            var xw = XmlWriter.Create(@"./data.xml", settings);
             serializer.WriteObject(xw, localUser);
 
             xw.Flush();

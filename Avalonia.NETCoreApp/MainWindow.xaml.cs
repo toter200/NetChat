@@ -1,27 +1,15 @@
 using System;
-using System.Collections;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.Diagnostics;
+using System.IO;
 using System.Net;
-using System.Net.NetworkInformation;
-using System.Reactive;
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
-using Avalonia.Layout;
+using Avalonia.Controls.Primitives;
+using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
-using NCSharedlib;
-using System.Threading;
-using System.Windows.Input;
-using Avalonia.Controls.Templates;
-using Avalonia.Data;
-using Avalonia.Diagnostics.ViewModels;
-using Avalonia.Input;
 using Avalonia.Threading;
-using SharpDX.DXGI;
-using System.IO;
+using NCSharedlib;
 
 
 /*
@@ -37,133 +25,106 @@ namespace Avalonia.NETCoreApp
     public class MainWindow : Window, INewChat
     {
         /// <summary>
-        /// Local User
+        ///     Messages in current chat window
         /// </summary>
-        public User localUser;
+        public static ObservableCollection<Message> currentChat;
+
+        public Chat chat;
+
         /// <summary>
-        /// Main chat window in current View
+        ///     Main chat window in current View
         /// </summary>
         private ListBox chatWindow;
-        /// <summary>
-        /// Messages in current chat window
-        /// </summary>
-        private ObservableCollection<Message> currentChat;
-        /// <summary>
-        /// Networking manager for current session
-        /// </summary>
-        private NetworkingManager netManager;
 
         public ObservableCollection<ChatList> knownChatCollection;
 
+        /// <summary>
+        ///     Local User
+        /// </summary>
+        public User localUser;
+
+        /// <summary>
+        ///     Networking manager for current session
+        /// </summary>
+        private NetworkingManager netManager;
+
         public User us1;
-        public Chat chat;
+
         public MainWindow()
         {
-            currentChat = new ObservableCollection<Message>(); 
-            knownChatCollection= new ObservableCollection<ChatList>();
+            currentChat = new ObservableCollection<Message>();
+            knownChatCollection = new ObservableCollection<ChatList>();
             InitializeComponent();
             currentChat.CollectionChanged += ChatChanged;
+        }
+
+
+        public void NewChat(Chat ch)
+        {
+            var cl = new ChatList(ch);
+            knownChatCollection.Add(cl);
         }
 
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
 
-            
-            //TODO:
-            //Kerer Fragen ob die Register seite xml schreiben soll und gleich wieder Lesen
+
             if (!File.Exists(@"./data.xml"))
             {
-                this.Hide();
+                Hide();
                 var register = new Register();
                 //register.Show();
                 register.ShowDialog(this);
             }
-            
+#if DEBUG
+            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress());
+#endif
+#if !DEBUG
             localUser = MemoryManager.ReadFromFile();
+#endif
+
 
             GlobalVars.LocalUser = localUser;
-            
+            chatWindow = this.FindControl<ListBox>("currentChat");
             us1 = new User("test@mail.com", IPAddress.Loopback);
-            
+
             chat = new Chat(localUser, us1);
-            Chat chat2 = new Chat(us1, localUser);
-            
-            ChatList list1 = new ChatList(chat, chat2);
-            knownChatCollection.Add(list1);
-            
-            
-            ListBox chatlist = this.FindControl<ListBox>("ChatList");
+            var msg = new Message("hello", us1, "LEFT");
+            chat.msgList.Add(msg);
+            var cl = new ChatList(chat);
+            knownChatCollection.Add(cl);
+
+
+            var chatlist = this.FindControl<ListBox>("ChatList");
 
             chatlist.Items = knownChatCollection;
 
-            //currentChatList.Items = currentChat
-#if !DEBUG
             netManager = new NetworkingManager(new Clientmanager(currentChat));
-            
+            //currentChat = new ObservableCollection<Message>(chat.msgList);
             netManager.StartTcpListenerThread(IPAddress.Loopback, GlobalVars.Port);
-            
-            localUser = new User("hajduk.d01@htl-ottakring.ac.at", NetworkingManager.GetIpAddress());
-            us1 = new User("loopback user", IPAddress.Loopback);
-            
-            
-            //stackPanel.Children.Add(localUser);
-            
-            chat = new Chat(localUser, us1);
-            Chat localChat = new Chat(localUser, localUser);
-            
-            //Tuple<string, int> t = new Tuple<string, int>("1", 2);
-            
-            knownChatCollection.Add(new Tuple<Chat, Chat>(chat, localChat));
-            
-            ListBox chatlist = this.FindControl<ListBox>("ChatList");
-            ListBox currentChatList = this.FindControl<ListBox>("currentChat");
-            StackPanel wrapper = this.FindControl<StackPanel>("wrapper");
-            Message msg = new Message(NetworkingManager.GetIpAddress().ToString(), localUser, "LEFT");
-#endif
-
+            chatWindow.Items = currentChat;
         }
 
-
-        public void NewChat(Chat ch)
+        public void OnPointerEnter(object sender, PointerEventArgs e)
         {
-            ChatList chlist = new ChatList(ch, ch);
-            knownChatCollection.Add(chlist);
+            var bt = (Button) sender;
+            bt.Background = Brushes.Gray;
         }
 
-        private void ShowChat(StackPanel window, Chat chat)
+        public void OnPointerLeave(object sender, PointerEventArgs e)
         {
-            foreach (Message msg in chat.msgList)
-            {
-                TextBlock tb = new TextBlock();
-                
-                if (msg.MessageOwner == localUser)
-                {
-                    tb.HorizontalAlignment = HorizontalAlignment.Right;
-                }
-                else
-                {
-                    tb.HorizontalAlignment = HorizontalAlignment.Left;
-                }
-                tb.Text = msg.Content;
-                window.Children.Add(tb);
-            }
+            var bt = (Button) sender;
+            bt.Background = Brushes.Black;
         }
 
         private void OnButtonSend(object sender, EventArgs e)
         {
-            try
-            {
-                TextBox tbox = this.FindControl<TextBox>("MessageInput");
-                Message msg = new Message(tbox.Text, localUser, "RIGHT");
-                currentChat.Add(msg);
-                
-                localUser.SendMessage(msg, chat);
-            }
-            catch
-            {
-                throw;
-            }
+            var tbox = this.FindControl<TextBox>("MessageInput");
+            var msg = new Message(tbox.Text, localUser, "RIGHT");
+            currentChat.Add(msg);
+
+            localUser.SendMessage(msg, chat);
         }
 
         public void OnButtonNewChat(object sender, EventArgs e)
@@ -171,51 +132,56 @@ namespace Avalonia.NETCoreApp
             var newChatWindow = new NewChat(this);
             newChatWindow.ShowDialog(this);
         }
-        
+
         public void OnButtonChat(object sender, EventArgs e)
         {
-            
             //User us = ((Button) sender).DataContext as User;
-            
         }
+
         private void ChatChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             Dispatcher.UIThread.InvokeAsync(() =>
                 {
                     foreach (Message msg in e.NewItems)
-                    {
-                        TextBlock tb = new TextBlock();
-                        if (msg.MessageOwner == localUser)
-                        {
-                            tb.HorizontalAlignment = HorizontalAlignment.Right;
-                        }
-                        else
-                        {
-                            tb.HorizontalAlignment = HorizontalAlignment.Left;
-                        }
-
-                        tb.Text = msg.Content;
-                        //chatWindow.Children.Add(tb);
-                    }
+                        /*TextBlock tb = new TextBlock();
+                            if (msg.MessageOwner == localUser)
+                            {
+                                tb.HorizontalAlignment = HorizontalAlignment.Right;
+                            }
+                            else
+                            {
+                                tb.HorizontalAlignment = HorizontalAlignment.Left;
+                            }
+    
+                            tb.Text = msg.Content;*/
+                        chatWindow.Items = currentChat;
                 }
             );
         }
 
-        /*
-         * TODO:
-         * finish observable colleciton
-         */
-        private void ChatListChanged(object sender, NotifyCollectionChangedEventArgs e)
+        public void OnUserClick(object sender, EventArgs e)
         {
-            Dispatcher.UIThread.InvokeAsync(() =>
-            {
-                foreach (var touple in e.NewItems)    
-                {
-                    
-                }
-            });
-        }
-        
-    }
+            var btn = (Button) sender;
+            var pop = new Popup();
+            var popBlock = new TextBlock();
+            var type = btn.Name;
+            var popstring = "";
 
+            switch (type)
+            {
+                case "UserInfo":
+                    popstring = "You are loged in as " + localUser.mail;
+                    break;
+                case "NetworkInfo":
+                    popstring = "This feature is currently not implemented";
+                    break;
+            }
+
+            popBlock.Text = popstring;
+            popBlock.Background = Brushes.Black;
+            popBlock.Foreground = Brushes.Yellow;
+            pop.Child = popBlock;
+            pop.IsOpen = true;
+        }
+    }
 }

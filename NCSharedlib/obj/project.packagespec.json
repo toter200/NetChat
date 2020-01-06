@@ -1,11 +1,14 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
+    "projectUniqueName": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
     "projectName": "NCSharedlib",
-    "projectPath": "/home/daniel/NetChat/NCSharedlib/NCSharedlib.csproj",
-    "outputPath": "/home/daniel/NetChat/NCSharedlib/obj/",
+    "projectPath": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\NCSharedlib.csproj",
+    "outputPath": "C:\\Users\\daniel\\RiderProjects\\NetChat\\NCSharedlib\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
     ],

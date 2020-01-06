@@ -5,71 +5,84 @@
         xmlns:local="clr-namespace:Avalonia.NETCoreApp"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
         x:Class="Avalonia.NETCoreApp.MainWindow"
-        Title="NetChat - P1" Height="800" Width="1024">
-    
-        
+        Title="NetChat - P1" Height="600" Width="800"
+        Background="Transparent">
+
+
     <Window.Resources>
-    <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter">
-        
-    </local:MessageAlignmentConverter>
+        <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter" />
     </Window.Resources>
-    
-   <DockPanel LastChildFill="True" Background="Gray">
-       <Border CornerRadius="10" Background="Black">
-           <DockPanel Name="Settignsbar" LastChildFill="False" Width="60"
-                      Background="Black" Margin="5" >
-               <Image DockPanel.Dock="Top"></Image>
-               <Button DockPanel.Dock="Top" Margin="10" Background="black"  Foreground="white">USR</Button>
-               <Button DockPanel.Dock="Top" Margin="10" Background="black" Foreground="white">Status</Button>
-               <Button DockPanel.Dock="Bottom" Margin="10" Background="black" Foreground="white">Set</Button>
-           </DockPanel>
-       </Border>
-       
-       
-       <Border CornerRadius="10" Background="Black">
-           <!--<StackPanel Name="KnownChatPanel" DockPanel.Dock="Left" Background="black" Width="150" Margin="5">
+
+    <DockPanel LastChildFill="True" Background="Transparent">
+        <Border CornerRadius="10" Background="Black">
+            <DockPanel Name="Settignsbar" LastChildFill="False" Width="60"
+                       Background="Black" Margin="5">
+                <Image DockPanel.Dock="Top"
+                       Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\Logo.png" />
+                <Button DockPanel.Dock="Top" Height="50" Width="50" Background="Transparent" BorderThickness="0"
+                        Cursor="Hand" Click="OnUserClick" PointerEnter="OnPointerEnter" PointerLeave="OnPointerLeave">
+                    <Image Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\UserIcon.png" />
+                </Button>
+                <!--<Button DockPanel.Dock="Top" Margin="10" Background="black"  Foreground="white">USR</Button>-->
+                <Button DockPanel.Dock="Top" Height="50" Width="50" Background="Transparent" BorderThickness="0"
+                        Cursor="Hand" PointerEnter="OnPointerEnter" PointerLeave="OnPointerLeave">
+                    <Image Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\CloudStatus.png" />
+                </Button>
+                <Button DockPanel.Dock="Bottom" Width="40" Height="40" Background="Transparent" BorderThickness="0"
+                        Cursor="Hand" PointerEnter="OnPointerEnter" PointerLeave="OnPointerLeave">
+                    <Image
+                        Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\SettingsWheel.png" />
+                </Button>
+            </DockPanel>
+        </Border>
+
+
+        <Border CornerRadius="10" Background="Transparent">
+            <!--<StackPanel Name="KnownChatPanel" DockPanel.Dock="Left" Background="black" Width="150" Margin="5">
                <Button Background="Gray" Margin="10">New Chat</Button>
                </StackPanel>
            -->
-           <StackPanel Name="wrapper">
-               <Button Click="OnButtonNewChat"> New Chat</Button>
-               <ListBox Width="300" Name="ChatList">
- 
-                  <ListBox.DataTemplates>
-                       <DataTemplate x:Key="ChatTemplate">
-                           <StackPanel Orientation="Horizontal">
-                                <Button >
-                                    <TextBlock  Text="{Binding Path=chat1}">
-                                    </TextBlock>
+            <StackPanel Name="wrapper">
+                <Border CornerRadius="10">
+                    <Button Click="OnButtonNewChat" Height="80" Background="Black" BorderThickness="0" Cursor="Hand"
+                            PointerEnter="OnPointerEnter" PointerLeave="OnPointerLeave">
+                        <Image Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\AddChat.png" />
+                    </Button>
+                </Border>
+                <ListBox Width="200" Height="520" Name="ChatList" Background="Black" BorderThickness="0" Scroll="True">
+                    <ListBox.DataTemplates>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <Button Background="Black" BorderThickness="0" Cursor="Hand"
+                                        Command="{Binding ChangeChat}">
+                                    <Image
+                                        Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\ChangeChat.png" />
                                 </Button>
-                           
-                                <Button >
-                                    <TextBlock Text="{Binding Path=chat2}">
-                                    </TextBlock>
-                                </Button>
-                           </StackPanel>
-                       </DataTemplate>
-                   </ListBox.DataTemplates>
-               </ListBox>
-               
-           </StackPanel>
-       </Border>      
-               <DockPanel LastChildFill="True">
-                   <DockPanel LastChildFill="True" DockPanel.Dock="Bottom" Height="50">
-                       <Button DockPanel.Dock="Right" Width="50" Click="OnButtonSend">Send</Button>
-                       <Button DockPanel.Dock="RIght" Width="50">File</Button>
-                       <TextBox  Name="MessageInput"></TextBox>
-                   </DockPanel>
-                   <ListBox Name="currentChat">
-                       <ListBox.DataTemplates >
-                            <DataTemplate x:Key="MessageTemplate">
-                                <TextBlock  HorizontalAlignment="{Binding Path=Alignment, converter={StaticResource MessageAlignmentConverter}}"
-                                           text="{Binding Path=Content}">
-                                    
-                                </TextBlock>
-                            </DataTemplate>
-                       </ListBox.DataTemplates>
-                   </ListBox>
-               </DockPanel>
+                                <TextBlock Foreground="Yellow" Background="White" Text="{Binding Path=chat.Recievers}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.DataTemplates>
+                </ListBox>
+            </StackPanel>
+        </Border>
+        <DockPanel LastChildFill="True">
+            <DockPanel LastChildFill="True" DockPanel.Dock="Bottom" Height="50">
+                <Button DockPanel.Dock="Right" Width="50" Click="OnButtonSend" Background="Black" Cursor="Hand"
+                        BorderThickness="0" PointerEnter="OnPointerEnter" PointerLeave="OnPointerLeave">
+                    <Image Height="30"
+                           Source="C:\Users\daniel\RiderProjects\NetChat\Avalonia.NETCoreApp\Resources\SendButton.png" />
+                </Button>
+                <TextBox Background="Black" Foreground="Yellow" Name="MessageInput" />
+            </DockPanel>
+            <ListBox Name="currentChat" FontSize="16" Background="Black" Foreground="Yellow">
+                <ListBox.DataTemplates>
+                    <DataTemplate x:Key="MessageTemplate">
+                        <TextBlock Focusable="False" Background="black"
+                                   HorizontalAlignment="{Binding Path=Alignment, Converter={StaticResource MessageAlignmentConverter}}"
+                                   Text="{Binding Path=Content}" />
+                    </DataTemplate>
+                </ListBox.DataTemplates>
+            </ListBox>
+        </DockPanel>
     </DockPanel>
 </Window>
